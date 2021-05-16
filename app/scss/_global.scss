@@ -9,32 +9,32 @@
     border: 0;
 }
 
-body{
+body {
     font-size: 16px;
     color: $default;
     background-color: #fff;
     @extend %rubik-400;
 }
 
-.container-wide{
+.container-wide {
     width: 1800px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-.container{
+.container {
     width: 1230px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-.title{
+.title {
     @extend %DMSans-700;
     font-size: 36px;
-    color: #191919;  
-    text-align: center;  
+    color: #191919;
+    text-align: center;
 }
 
-a:hover{
+a:hover {
     color: #191919;
 }
