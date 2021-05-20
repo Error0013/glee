@@ -1,0 +1,12 @@
+.button {
+    position: relative;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 15px 85px 15px 20px;
+
+    svg {
+        position: absolute;
+        right: 18px;
+        transform: translateY(50%);
+    }
+}
