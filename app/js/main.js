@@ -4,7 +4,10 @@ $(function () {
         arrows: false,
     });
 
-
+    $('.partners__item').slick({
+      autoplay: true,
+      arrows: false,
+    });
 
     var containerEl1 = document.querySelector('[data-ref="container-1"]');
     var containerEl2 = document.querySelector('[data-ref="container-2"]');

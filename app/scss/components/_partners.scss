@@ -1,0 +1,14 @@
+.partners{
+    background-color: $yellow600;
+
+    &__wrapper{
+        display: flex;
+        padding: 90px 0 90px 50px;
+        align-items: center;
+    }
+
+    &__logo:not(:last-child){
+        margin-right: 100px;
+    }
+
+}

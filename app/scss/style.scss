@@ -6,33 +6,14 @@
 @import 'mixin';
 
 
+
 @import 'components/header';
 @import 'index-page/index-page';
 
 
 
-.articles{
-    &__title-wrapper{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__link{
-        position: relative;
-        font-family: $dmsans;
-        font-weight: 700;
-        color: $black800;
-        padding-right: 25px;
-        &::after{
-            content: '>';
-            position: absolute;
-            right: 0;
-        }
-    }
-}
 
   
-
+@import 'components/partners';
 
 @import 'components/footer'

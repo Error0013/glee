@@ -424,7 +424,7 @@
 
     &__link {
         display: block;
-        padding: 40px 0 30px 35px;
+        padding: 30px 0 30px 35px;
     }
 
     &__item {
@@ -461,12 +461,12 @@
 
 
 .video {
-    padding-bottom: 110px;
+    padding-bottom: 105px;
 
     &__link {
         position: relative;
         display: block;
-        height: 62.5vh;
+        height: 46vh;
         background-size: cover;
         background-position: center; 
         &:hover .play-btn{
@@ -507,3 +507,108 @@
 
 }
 
+.articles{
+
+    &__title-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__link{
+        position: relative;
+        border-bottom: 1px solid transparent;        
+        font-family: $dmsans;
+        font-weight: 700;
+        color: $black800;
+        padding-right: 25px;
+        transition: 0.5s;
+        &::after{
+            content: '>';
+            position: absolute;
+            right: 0;
+        }
+
+        &:hover{
+            border-bottom: 1px solid $black800;
+        }
+    }
+
+    &__items{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__news{
+        display: flex;
+    }
+
+    &__bottom{
+        background-color: $yellow600;
+    }
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+ 
+    &__text{
+        max-width: 370px;
+        background-color: $white;
+        padding-top: 35px;
+    }
+
+    &__info{
+        
+        padding-bottom: 15px; 
+        font-family: $dmsans;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.2;
+        color: $black800;
+        border-bottom: 1px solid $white300;
+    }
+
+    &__button{
+        position: relative;
+        display: flex;
+    }
+
+    &__btn{
+        position: absolute;
+        bottom: 0;
+        left: 25px;
+        transform: translateY(50%);
+        font-family: $poppins;
+        font-weight: 700;
+        font-size: 14px;
+        border-radius: 25px;        
+        background-color: $blue500;
+    }
+
+    &__btn-text{
+        display: block;
+        text-transform: uppercase;
+        color: $white;
+        padding: 5px 30px;
+    }   
+      
+
+    &__info,
+    &__info-date{
+        margin: 0 30px;
+    }
+
+    &__info-date{
+        padding: 10px 0 15px;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 2.5;
+        span:not(:last-child){
+            margin-right: 40px;
+        }
+    }
+
+}

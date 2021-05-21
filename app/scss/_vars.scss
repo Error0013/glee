@@ -19,6 +19,7 @@ $gray300: #8b8b8b;
 $gray400: #7b7b7b;;
 $white: #fff;
 $white200: #f9fafb;
+$white300: #e0e0e0;
 $green200: #dfe3e2;
 
 
@@ -26,3 +27,9 @@ $poppins: 'Poppins', sans-serif;
 $rubik: 'Rubik', sans-serif;
 $dmsans: 'DMSans', sans-serif;
 
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
