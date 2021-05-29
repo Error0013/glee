@@ -1,5 +1,9 @@
 .footer {
-    padding: 80px 0 40px;
+    padding-top: 70px;
+
+    @include r($md) {
+        padding-top: 30px;
+    }
 
     &__inner {
         position: relative;
@@ -8,15 +12,41 @@
         padding-bottom: 65px;
         border-bottom: 1px solid #dae4e9;
 
+        @include r($sm) {
+            flex-wrap: wrap;
+        }
+
+        @include r($sm) {
+            padding-bottom: 30px;
+        }
     }
 
     &__box {
         max-width: 270px;
         width: 100%;
 
+        @include r($sm) {
+            max-width: 100%;
+            width: 50%;
+            margin-bottom: 10px;
+        }
+
+        @include r($mob) {
+            text-align: center;
+        }
+
         &:not(:last-child) {
             margin-right: 30px;
+
+            @include r($sm) {
+                margin-right: 0;
+            }
         }
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-bottom: 30px;
     }
 
     &__title {
@@ -42,75 +72,96 @@
         outline: transparent;
         border-bottom: 1px solid transparent;
         transition: border-bottom 0.5s, color 0.5s;
-        &:focus{
+
+        &:focus {
             color: $black900;
         }
-        &:hover{
+
+        &:hover {
             border-bottom: 1px solid $black900;
             color: $black900;
         }
     }
-
-}
-
-.contacts {
-
-    &__info {
-        font-size: 14px;
-        color: $gray400;
-        line-height: 1.7;
-    }
-
-    &__logo {
-        display: inline-block;
-        margin-bottom: 30px;
-    }
-
-    &__item:not(:last-child) {
-        margin-bottom: 10px;
-    }
-
-    &__item span {
-        text-transform: uppercase;
-    }
-
-    &__links{
-        outline: transparent;
-        border-bottom: 1px solid transparent;
-        transition: color 0.5s, border-bottom 0.5s;
-        &:hover{
-            color: $black900;
-            border-bottom: 1px solid $black900;
-        }
-        &:focus{
-            color: $black900;
-        }
-    }
-
-}
-
-.form-box {
 
     &__text {
         font-size: 14px;
         line-height: 1.7;
-        margin-bottom: 40px;
         color: $gray400;
+        @include clamp(1);        
     }
 
-    &__wrapper{
+    &__copy{
+        padding: 30px 0;
+        font-size: 14px;
+        color: $gray400;
         display: flex;
+        justify-content: space-between;
+
+        @include r($mob) {
+            justify-content: center;
+            flex-wrap: wrap-reverse;
+        }
+    }
+
+
+}
+
+.contacts {
+    font-size: 14px;
+    color: $gray400;
+    line-height: 1.7;
+
+    &__item{
+    
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }    
+        
+        span {
+            text-transform: uppercase;
+        }
+    }
+
+    a {
+        outline: transparent;
+        border-bottom: 1px solid transparent;
+        transition: color 0.5s, border-bottom 0.5s;
+
+        &:hover {
+            color: $black900;
+            border-bottom: 1px solid $black900;
+        }
+
+        &:focus {
+            color: $black900;
+        }
+    }
+
+}
+
+.news-form {
+    display: flex;
+    padding-top: 40px;
+
+    @include r($mob) {
+        justify-content: center;
     }
 
     &__input {
-        width: 170px;
-        border: none;
+        max-width: 170px;
+        width: 100%;
+        border: 1px solid transparent;
         padding: 15px;
         background-color: $yellow600;
         outline: transparent;
 
+        @include r($md) {
+            max-width: 80%;
+            padding: 10px;
+        }
+
         &:focus {
-            border-bottom: 1px solid $black900;
+            border-color: $black900;
         }
 
         &::placeholder {
@@ -120,8 +171,6 @@
             font-weight: 400;
         }
     }
-
-
 
     &__btn {
         font-size: 14px;
@@ -134,6 +183,10 @@
         outline: transparent;
         transition: color 0.3s;
 
+        @include r($md) {
+            padding: 5px;
+        }
+
         &:focus {
             outline: 1px solid $black900;
         }
@@ -144,39 +197,28 @@
     }
 }
 
-.copyright {
-    padding-top: 37px;
-    font-size: 14px;
-    color: $gray400;
-    display: flex;
-    justify-content: space-between;
 
+.footer-menu{
     &__items {
         display: flex;
+
+        @include r($mob) {
+            margin-bottom: 10px;
+        }
     }
 
-    &__item {
+    &__item {        
+
         &:not(:last-child) {
             padding-right: 15px;
             border-right: 1px solid #7b7b7b;
             margin-right: 15px;
-        }
-
+        }        
     }
 
     &__link{
-        padding-bottom: 5px;
-        border-bottom: 1px solid transparent;
-        transition: color 0.5s, border-bottom 0.5s;
-        outline: transparent;
-
-        &:hover{
-            color: $black900;
-            border-bottom: 1px solid $black900;
-        }
-        &:focus{
-            color: $black900;
-        }
+        font-weight: 400;
+        font-size: 14px;
     }
-
 }
+

@@ -27,9 +27,29 @@ $poppins: 'Poppins', sans-serif;
 $rubik: 'Rubik', sans-serif;
 $dmsans: 'DMSans', sans-serif;
 
+$lg: 1200;
+$md: 992;
+$sm: 768;
+$mob: 576;
+
+@mixin clamp ($clamp...){
+  display: -webkit-box;
+  -webkit-line-clamp: $clamp;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
+}
+
+
+@mixin r($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content;
+  }
 }

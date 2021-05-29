@@ -1,14 +1,30 @@
-.partners{
+.partners {
     background-color: $yellow600;
+    padding-top: 170px;
 
-    &__wrapper{
+    &__wrapper {
+        display: flex;
+    }
+
+    @include r($md) {
+        padding-top: 0;
+    }
+
+    &__items {
         display: flex;
         padding: 90px 0 90px 50px;
         align-items: center;
+
+        @include r($md) {
+            padding: 60px 0 80px 0;
+        }
+
+        @include r($mob) {
+            padding: 30px 0 50px 0;
+        }
     }
 
-    &__logo:not(:last-child){
-        margin-right: 100px;
+    &__logo {
+        object-fit: cover;
     }
-
 }

@@ -1,0 +1,43 @@
+.products-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+
+    @include r($sm) {
+        margin-bottom: 40px;
+    }
+
+    @include r($mob) {
+        margin-bottom: 10px;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 18px;
+    }
+
+    &__btn {
+        border: none;
+        border-bottom: 1px solid transparent;
+        background-color: transparent;
+        font-family: $dmsans;
+        font-weight: 700;
+        color: $gray300;
+        transition: color 0.5s, border-bottom 0.5s;
+        outline: transparent;
+
+        &:hover {
+            color: $black700;
+            border-bottom: 1px solid $black700;
+        }
+
+        &:focus {
+            color: $black700;
+        }
+    }
+
+    .mixitup-control-active {
+        color: $black700;
+    }
+}

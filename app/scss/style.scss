@@ -3,17 +3,12 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
-@import 'mixin';
-
 
 
 @import 'components/header';
-@import 'index-page/index-page';
-
-
-
-
-  
+@import 'components/button';  
 @import 'components/partners';
+@import 'components/footer';
 
-@import 'components/footer'
+
+@import 'index-page/index-page';
