@@ -1,33 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+@@include('./parts/components/_head.html', {
+"title": "Glee"
+})
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glee</title>
-    <link rel="icon" href="images/product-card__icons/favicon.ico">
 
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
+@@include('./parts/components/_header.html')
 
-    @@include('./parts/_header.html')
-    
-    <main class="main">               
-        <h1 class="sr-only">Glee- furniture and decor, your best choice.</h1>
+<main class="main">
+    <h1 class="sr-only">Glee- furniture and decor, your best choice.</h1>
 
-        @@include('./parts/_trendy_slider.html')
-        @@include('./parts/_privilege.html')
-        @@include('./parts/_products_week.html')
-        @@include('./parts/_design.html')
-        @@include('./parts/_articles.html')
-        @@include('./parts/_partners.html')
+    @@include('./parts/index-page/_trendy_slider.html')
+    @@include('./parts/index-page/_privilege.html')
+    @@include('./parts/index-page/_products_week.html')
+    @@include('./parts/index-page/_design.html')
+    @@include('./parts/index-page/_articles.html')
+    @@include('./parts/index-page/_partners.html')
 
-    </main> 
+</main>
 
-    @@include('./parts/_footer.html')
+@@include('./parts/components/_footer.html')
 
-    <script src="js/main.min.js"></script>
-</body>
-</html>
+
+@@include('./parts/components/_scripts.html')

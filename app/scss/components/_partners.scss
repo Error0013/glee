@@ -2,12 +2,12 @@
     background-color: $yellow600;
     padding-top: 170px;
 
-    &__wrapper {
-        display: flex;
-    }
-
     @include r($md) {
         padding-top: 0;
+    }
+
+    &__wrapper {
+        display: flex;
     }
 
     &__items {
@@ -26,5 +26,10 @@
 
     &__logo {
         object-fit: cover;
+    }
+
+    .slick-track {
+        display: flex;
+        align-items: center;
     }
 }

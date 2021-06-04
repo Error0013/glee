@@ -4,10 +4,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 45px;
     }
 
     &__title {
+        margin-bottom: 0;
 
         @include r($mob) {
             text-align: start;
@@ -21,7 +22,7 @@
         font-weight: 700;
         color: $black800;
         padding-right: 25px;
-        transition: 0.5s;
+        transition: border-color 0.5s;
         @include clamp(1);
 
         @include r($sm) {
@@ -39,14 +40,14 @@
         }
 
         &:hover {
-            border-bottom: 1px solid $black800;
+            border-color: $black800;
         }
     }
 
     &__items {
         display: flex;
         justify-content: space-between;
-        margin-bottom: -164px;
+        margin-bottom: -169px;
 
         @include r($md) {
             margin-bottom: 0;
@@ -54,6 +55,10 @@
 
         @include r($sm) {
             flex-direction: column;
+        }
+
+        @include r($mob) {
+            flex-wrap: wrap;
         }
     }
 
@@ -64,7 +69,7 @@
             @include r($lg) {
                 margin-right: 10px;
             }
-            
+
             @include r($sm) {
                 margin-right: 0;
                 margin-bottom: 10px;
@@ -72,7 +77,7 @@
         }
     }
 
-    &-card {
+    .articles-card {
         max-width: 370px;
         display: flex;
         flex-direction: column;
@@ -85,6 +90,14 @@
             align-items: center;
         }
 
+        @include r($mob) {
+            display: block;
+        }
+
+        &__inner {
+            display: flex;
+        }
+
         &__img {
             width: 370px;
             height: 250px;
@@ -92,12 +105,11 @@
             transition: transform 0.5s;
 
             @include r($sm) {
-                width: 50%;
                 height: auto;
             }
 
             @include r($mob) {
-                display: none;
+                width: 100%;
             }
 
             &:hover {
@@ -131,36 +143,40 @@
 
         }
 
-        &__info {
-            padding: 30px 0 15px;
-            font-family: $dmsans;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 1.2;
-            color: $black800;
-            border-bottom: 1px solid $white300;
-        }
-
-        &__bottom {
-            padding: 10px 0 15px;
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: 12px;
-            line-height: 2.5;
-        }
-
-
         &__info,
         &__bottom {
-            margin: 0 30px;
+            margin: 0 30px 15px;
+            font-weight: 500;
 
             @include r($mob) {
                 margin: 0;
             }
         }
 
+        &__info {
+            padding-top: 35px;
+            font-family: $dmsans;
+            font-size: 18px;
+            line-height: 1.2;
+            color: $black800;
+            @include clamp(3);
+        }
+
+        &__bottom {
+            padding-top: 10px;
+            text-transform: uppercase;
+            border-top: 1px solid $white300;
+            font-size: 12px;
+            line-height: 2.5;
+            @include clamp(1);
+
+            svg {
+                margin-right: 5px;
+            }
+        }
+
         &__date {
-            margin-right: 40px;
+            margin-right: 25px;
         }
 
         &__copy {
@@ -172,8 +188,5 @@
                 border-color: $black700;
             }
         }
-
     }
-
-
 }

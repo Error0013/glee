@@ -32,19 +32,17 @@ $(function () {
     ]
   });
 
-  $('.user-nav__link--btn').on('click', function () {
+  $('.menu__button').on('click', function () {
     $('.menu__list').toggleClass('menu__list--active');
   });
 
-
-  $('.user-nav__link--btn').on('click', function () {
-    $('.user-nav__link--search').toggleClass('user-nav__link--search-active');
+  $('.menu__button').on('click', function () {
+    $('.user-nav').toggleClass('user-nav--active');
   });
 
-  $('.user-nav__link--btn').on('click', function () {
-    $('.user-nav__wrapper').toggleClass('user-nav__wrapper--active');
+  $('.menu__button').on('click', function () {
+    $('.menu__button').toggleClass('menu__button--active');
   });
-
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {

@@ -7,14 +7,15 @@
         &::after {
             content: '';
             position: absolute;
-            background-image: url(../images/content/slider__bg.png);
-            background-repeat: no-repeat;
-            width: 795px;
-            height: 635px;
-            top: 100px;
-            right: 0;
+            width: 634px;
+            height: 634px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 185px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0%), rgba(255, 255, 255, 100%));
+            border-radius: 50%;
 
-            @include r($sm){
+            @include r($sm) {
                 display: none;
             }
         }
@@ -49,27 +50,27 @@
             font-size: 60px;
         }
 
-        @include r($mob){
+        @include r($mob) {
             font-size: 30px;
         }
     }
 
-    &__text{
+    &__text {
 
         @include r($md) {
             z-index: 1;
         }
     }
-    
+
     &__info {
         width: 370px;
         font-size: 18px;
         line-height: 1.7;
         color: $blue700;
         margin-bottom: 35px;
-        @include clamp(3);
+        @include clamp(5);
 
-        @include r($sm){
+        @include r($sm) {
             width: 100%;
         }
     }
@@ -87,7 +88,7 @@
             margin-bottom: 50px;
         }
 
-        @include r($mob){
+        @include r($mob) {
             margin-bottom: 20px;
             padding: 15px 60px 16px 15px;
         }
@@ -108,9 +109,7 @@
         &:focus {
             outline: 2px solid #f9fafb;
         }
-
     }
-
 
     &__img {
         width: 640px;
@@ -119,13 +118,8 @@
         z-index: 1;
 
         @include r($lg) {
-            height: 220px;
-        }
-    }
-
-    .slick-slide img {
-        @include r($mob) {
-            display: none;
+            width: 80%;
+            height: auto;
         }
     }
 
@@ -173,16 +167,20 @@
     &__items {
         background-color: $yellow600;
         display: flex;
-        padding: 15px 0;
+        padding: 35px 0;
 
         @include r($sm) {
             flex-direction: column;
         }
+
+        @include r($mob) {
+            padding: 0;
+        }
     }
 
     &__item {
-        max-width: 590px; 
-        width: 100%;       
+        max-width: 590px;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -192,9 +190,9 @@
             justify-content: flex-start;
             padding: 10px 10px;
         }
-        
 
-        &:not(:last-child){
+
+        &:not(:last-child) {
             border-right: 1px solid $green200;
 
             @include r($sm) {
@@ -203,19 +201,30 @@
             }
         }
 
-        svg{
+        svg {
             margin-right: 40px;
             fill: $blue500;
-            
+
             @include r($md) {
                 margin: 0 10px;
             }
 
-            @include r($sm){
+            @include r($sm) {
                 margin: 0 30px;
+            }
+
+            @include r($mob) {
+                margin: 10px;
             }
         }
 
+    }
+
+    &__inner {
+
+        @include r($sm) {
+            width: 100%;
+        }
     }
 
     &__title {

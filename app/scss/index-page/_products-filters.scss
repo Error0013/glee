@@ -3,12 +3,12 @@
     justify-content: center;
     margin-bottom: 80px;
 
-    @include r($sm) {
+    @include r($lg) {
         margin-bottom: 40px;
     }
 
     @include r($mob) {
-        margin-bottom: 10px;
+        margin-bottom: 30px;
         overflow-x: auto;
         justify-content: flex-start;
     }

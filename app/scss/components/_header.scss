@@ -1,15 +1,20 @@
 .header {
-    padding: 60px 0;
+    padding: 45px 0;
+
+    @include r($sm) {
+        padding: 0;
+    }
 
     &__top {
-        position: fixed;
-        right: 0;
-        left: 0;
-        z-index: 2;
-        top: 0;
+        position: relative;
         transition: background-color 0.5s, box-shadow 0.5s, padding 0.5s, top 0.5s;
+        z-index: 2;
 
         &--fixed {
+            position: fixed;
+            right: 0;
+            left: 0;
+            top: 0;
             background-color: $yellow600;
             top: 0;
             padding: 10px 0;
@@ -43,8 +48,33 @@
     justify-content: space-between;
     align-items: center;
 
-    &--header {
-        padding-top: 15px;
+    &__header {
+
+        @include r($sm) {
+            padding: 15px 0;
+        }
+
+        .menu__item {
+
+            &:not(:last-child) {
+                @include r($sm) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .menu__link {
+
+            @include r($sm) {
+                font-size: 26px;
+                display: block;
+                padding: 20px;
+            }
+
+            @include r($mob) {
+                font-size: 22px;
+            }
+        }
     }
 
     &__list {
@@ -65,7 +95,7 @@
             transform: translateY(0);
 
             @include r($sm) {
-                background-color: #fef7f0;
+                background-color: $yellow600;
                 box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.80);
             }
         }
@@ -76,15 +106,6 @@
 
         &:not(:last-child) {
             margin-right: 35px;
-        }
-
-        &--header{
-
-            &:not(:last-child) {
-                @include r($sm) {
-                    margin-right: 0;
-                }
-            }
         }
     }
 
@@ -97,15 +118,6 @@
         outline: transparent;
         font-family: $rubik;
         font-weight: 500;
-
-        &--header {
-
-            @include r($sm) {
-                font-size: 26px;
-                display: block;
-                padding: 20px;
-            }
-        }
 
         &:hover {
             border-color: $blue700;
@@ -124,6 +136,15 @@
         flex-direction: column-reverse;
     }
 
+    @include r($sm) {
+        transform: translateY(-500%);
+        transition: transform 0.5s;
+    }
+
+    &--active {
+        transform: translateY(100%);
+    }
+
     &__link {
 
         display: flex;
@@ -131,7 +152,7 @@
         justify-content: center;
         width: 50px;
         height: 50px;
-        border-radius: 50%;        
+        border-radius: 50%;
 
         &--search {
             margin-right: 20px;
@@ -148,18 +169,6 @@
             @include r($md) {
                 position: absolute;
                 transform: translateY(300%);
-            }
-
-            @include r($sm) {
-                transform: translate(200%, 300%);
-                transition: transform 1s;
-            }
-
-            &-active{
-
-                @include r($sm) {
-                transform: translate(0, 300%);
-                }
             }
 
             &:hover {
@@ -190,7 +199,7 @@
 
             @include r($md) {
                 background-color: $gray100;
-            }            
+            }
 
             &:hover {
                 fill: $white;
@@ -250,7 +259,6 @@
                 border-color: $black900;
             }
         }
-
     }
 
     &__number {
@@ -266,6 +274,10 @@
         border-radius: 50%;
         font-family: $dmsans;
         font-weight: 400;
+
+        @include r($lg) {
+            right: 8px;
+        }
     }
 
     &__wrapper {
@@ -286,19 +298,32 @@
             transform: translateY(100%);
             flex-direction: column;
         }
+    }
+}
+
+.menu {
+
+    &__button {
+        display: none;
+        z-index: 2;
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        right: 0;
+        transform: translateX(-50%);
 
         @include r($sm) {
-            transform: translate(200%, 100%);
-            transition: transform 1s;
+            display: block;
         }
 
-        &--active{
-
-            @include r($sm) {
-            transform: translate(0, 100%);
+        &--active {
+            svg {
+                transform: rotate(90deg);
             }
         }
-        
-    }
 
+        svg {
+            fill: $blue700;
+        }
+    }
 }

@@ -33,6 +33,8 @@
 
         @include r($mob) {
             text-align: center;
+            width: 100%;
+            margin-bottom: 30px;
         }
 
         &:not(:last-child) {
@@ -47,6 +49,10 @@
     &__logo {
         display: inline-block;
         margin-bottom: 30px;
+
+        @include r($mob) {
+            margin-bottom: 20px;
+        }
     }
 
     &__title {
@@ -87,7 +93,10 @@
         font-size: 14px;
         line-height: 1.7;
         color: $gray400;
-        @include clamp(1);        
+        
+        @include r($mob) {
+            text-align: center;
+        }
     }
 
     &__copy{
@@ -103,7 +112,30 @@
         }
     }
 
+    &__menu{
 
+        .menu__items {
+            display: flex;
+    
+            @include r($mob) {
+                margin-bottom: 10px;
+            }
+        }
+    
+        .menu__item {        
+    
+            &:not(:last-child) {
+                padding-right: 15px;
+                border-right: 1px solid #7b7b7b;
+                margin-right: 15px;
+            }        
+        }
+    
+        .menu__link{
+            font-weight: 400;
+            font-size: 14px;
+        }
+    }
 }
 
 .contacts {
@@ -136,28 +168,32 @@
             color: $black900;
         }
     }
-
 }
 
 .news-form {
     display: flex;
-    padding-top: 40px;
+    padding-top: 35px;
 
     @include r($mob) {
         justify-content: center;
+        padding-top: 20px;
     }
 
     &__input {
         max-width: 170px;
         width: 100%;
         border: 1px solid transparent;
-        padding: 15px;
+        padding: 0 15px;
         background-color: $yellow600;
         outline: transparent;
 
         @include r($md) {
             max-width: 80%;
-            padding: 10px;
+            padding: 0 10px;
+        }
+
+        @include r($mob) {
+            max-width: 40%;
         }
 
         &:focus {
@@ -174,7 +210,7 @@
 
     &__btn {
         font-size: 14px;
-        padding: 16px 17px;
+        padding: 10px 17px;
         border: none;
         background-color: $blue500;
         font-family: $dmsans;
@@ -197,28 +233,4 @@
     }
 }
 
-
-.footer-menu{
-    &__items {
-        display: flex;
-
-        @include r($mob) {
-            margin-bottom: 10px;
-        }
-    }
-
-    &__item {        
-
-        &:not(:last-child) {
-            padding-right: 15px;
-            border-right: 1px solid #7b7b7b;
-            margin-right: 15px;
-        }        
-    }
-
-    &__link{
-        font-weight: 400;
-        font-size: 14px;
-    }
-}
 
