@@ -1,4 +1,5 @@
 .trendy-slider {
+    position: relative;
 
     &__item {
         position: relative;
@@ -118,7 +119,7 @@
         z-index: 1;
 
         @include r($lg) {
-            width: 80%;
+            width: 50%;
             height: auto;
         }
     }

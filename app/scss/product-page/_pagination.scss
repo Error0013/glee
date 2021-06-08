@@ -1,0 +1,33 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 115px;
+
+    @include r($lg) {
+        margin-bottom: 80px;
+    }
+
+    @include r($mob) {
+        margin-bottom: 50px;
+    }
+
+    &__item {
+        padding-right: 15px;
+    }
+
+    &__link {
+        padding: 15px 20px;
+        border: 1px solid $blue500;
+        transition: color 0.5s, background-color 0.5s;
+
+        &:hover {
+            background-color: $blue500;
+            color: $white;
+        }
+
+        &--active {
+            background-color: $blue500;
+            color: $white;
+        }
+    }
+}

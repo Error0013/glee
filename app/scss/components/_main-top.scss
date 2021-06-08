@@ -1,0 +1,46 @@
+.main-top {
+    background-color: $blue300;
+    padding: 20px 0 25px;
+    text-align: center;
+
+    @include r($mob) {
+        padding: 15px 0;
+    }
+
+    &__title {
+        font-family: $rubik;
+        font-weight: 300;
+        color: $blue600;
+        margin-bottom: 10px;
+    }
+}
+
+.breadcrumbs {
+    display: inline-flex;
+    justify-content: center;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+        padding: 0 5px 0 15px;
+        font-size: 14px;
+        line-height: 1.7;
+        color: $gray400;
+
+        &:hover {
+            color: $blue900;
+        }
+    }
+
+    &__item:not(:first-child) {
+
+        &::before {
+            content: '/';
+            position: absolute;
+            left: 0;
+        }
+    }
+}

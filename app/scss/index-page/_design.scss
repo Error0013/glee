@@ -29,7 +29,8 @@
         }
 
         @include r($mob) {
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: minmax(min-content, 400px);
+            justify-content: center;
             margin-bottom: 30px;
         }
     }

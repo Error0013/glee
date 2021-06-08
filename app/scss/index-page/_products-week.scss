@@ -30,8 +30,9 @@
         }
 
         @include r($mob) {
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: minmax(min-content, 400px);
             margin-bottom: 30px;
+            justify-content: center;
         }
     }
 

@@ -24,6 +24,7 @@
         padding-right: 25px;
         transition: border-color 0.5s;
         @include clamp(1);
+        min-width: 100px;
 
         @include r($sm) {
             padding: 0 0 0 10px;
@@ -72,7 +73,7 @@
 
             @include r($sm) {
                 margin-right: 0;
-                margin-bottom: 10px;
+                margin-bottom: 25px;
             }
         }
     }
@@ -120,6 +121,14 @@
         &__wrapper {
             position: relative;
             background-color: $white;
+
+            @include r($sm) {
+                width: 75%;
+            }
+
+            @include r($mob) {
+                width: 100%;
+            }
         }
 
         &__link {
@@ -136,6 +145,14 @@
             padding: 5px 30px;
             transform: translateY(-50%);
             transition: color 0.5s;
+
+            @include r($sm) {
+                transform: translateY(0);
+            }
+
+            @include r($mob) {
+                transform: translateY(-50%);
+            }
 
             &:hover {
                 color: $yellow700;
@@ -167,16 +184,18 @@
             text-transform: uppercase;
             border-top: 1px solid $white300;
             font-size: 12px;
+            color: $blue600;
             line-height: 2.5;
             @include clamp(1);
 
             svg {
-                margin-right: 5px;
+                margin-right: 2px;
+                fill: $blue600;
             }
         }
 
         &__date {
-            margin-right: 25px;
+            margin-right: 20px;
         }
 
         &__copy {

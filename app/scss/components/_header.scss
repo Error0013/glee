@@ -1,33 +1,45 @@
 .header {
-    padding: 45px 0;
+    padding: 95px 0 50px;
 
     @include r($sm) {
-        padding: 0;
+        padding: 70px 0 0;
     }
 
     &__top {
-        position: relative;
-        transition: background-color 0.5s, box-shadow 0.5s, padding 0.5s, top 0.5s;
-        z-index: 2;
+        position: absolute;
+        transition: background-color 0.5s, box-shadow 0.5s, position 0.5s, padding 1.5s;
+        padding-top: 45px;
+        right: 0;
+        left: 0;
+        top: 0;
+        z-index: 15;
+
+        @include r($sm) {
+            padding-top: 10px;
+        }
 
         &--fixed {
             position: fixed;
-            right: 0;
-            left: 0;
-            top: 0;
             background-color: $yellow600;
-            top: 0;
             padding: 10px 0;
             box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.80);
         }
     }
 
+    .logo__img {
+        
+        @include r($mob) {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+    }
 }
 
 .logo {
 
-    @include r($sm) {
-        z-index: 1;
+    @include r($lg) {
+        z-index: 15;
     }
 
     &--header {
@@ -40,7 +52,9 @@
 
     &__img {
         object-fit: cover;
+
     }
+
 }
 
 .menu {
@@ -50,14 +64,10 @@
 
     &__header {
 
-        @include r($sm) {
-            padding: 15px 0;
-        }
-
         .menu__item {
 
             &:not(:last-child) {
-                @include r($sm) {
+                @include r($md) {
                     margin-right: 0;
                 }
             }
@@ -65,7 +75,7 @@
 
         .menu__link {
 
-            @include r($sm) {
+            @include r($md) {
                 font-size: 26px;
                 display: block;
                 padding: 20px;
@@ -79,22 +89,24 @@
 
     &__list {
         display: flex;
-        transition: transform 1s, background-color 1s, box-shadow 0.5s;
 
-        @include r($sm) {
+        @include r($md) {
             position: absolute;
             flex-direction: column;
             left: 0;
             top: 0;
             right: 0;
-            padding-top: 60px;
+            height: 100vh;
+            overflow-y: scroll;
+            padding-top: 120px;
             transform: translateY(-200%);
+            transition: transform 1s, background-color 1.5s, box-shadow 1s;
         }
 
         &--active {
             transform: translateY(0);
 
-            @include r($sm) {
+            @include r($md) {
                 background-color: $yellow600;
                 box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.80);
             }
@@ -125,6 +137,7 @@
 
         &:focus {
             color: $black900;
+            border-color: $black900;
         }
     }
 }
@@ -133,16 +146,18 @@
     display: flex;
 
     @include r($md) {
-        flex-direction: column-reverse;
+        transform: translateX(-25%);
     }
 
-    @include r($sm) {
-        transform: translateY(-500%);
-        transition: transform 0.5s;
+    @include r($mob) {
+        transform: translate(0, -200%);
+        transition: transform 1s;
     }
 
     &--active {
-        transform: translateY(100%);
+        @include r($mob) {
+            transform: translate(0, 100%);
+        }
     }
 
     &__link {
@@ -164,11 +179,6 @@
 
             @include r($lg) {
                 margin-right: 5px;
-            }
-
-            @include r($md) {
-                position: absolute;
-                transform: translateY(300%);
             }
 
             &:hover {
@@ -197,10 +207,6 @@
                 margin-right: 5px;
             }
 
-            @include r($md) {
-                background-color: $gray100;
-            }
-
             &:hover {
                 fill: $white;
             }
@@ -226,11 +232,6 @@
                 margin-right: 5px;
             }
 
-            @include r($md) {
-                background-color: $gray100;
-            }
-
-
             &:hover {
                 fill: $white;
             }
@@ -246,10 +247,6 @@
             outline: transparent;
             fill: $white;
             transition: fill 0.5s;
-
-            @include r($md) {
-                position: relative;
-            }
 
             &:hover {
                 fill: $black900;
@@ -293,11 +290,6 @@
             margin-right: 0;
         }
 
-        @include r($md) {
-            position: absolute;
-            transform: translateY(100%);
-            flex-direction: column;
-        }
     }
 }
 
@@ -312,7 +304,7 @@
         right: 0;
         transform: translateX(-50%);
 
-        @include r($sm) {
+        @include r($md) {
             display: block;
         }
 

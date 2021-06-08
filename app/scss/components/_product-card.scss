@@ -38,6 +38,10 @@
         @include r($lg) {
             opacity: 1;
         }
+
+        @include r($md) {
+            transform: translate(50%, 50%);
+        }
     }
 
     &__item:not(:last-child) {

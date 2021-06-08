@@ -1,0 +1,38 @@
+@@include('./parts/components/_head.html', {
+"title": "Product-list"
+})
+
+@@include('./parts/components/_header.html')
+
+<main class="main">
+    <h1 class="sr-only">Glee- furniture and decor, your best choice.</h1>
+    @@include('./parts/components/_main-top.html')
+
+<section class="shop">
+        <div class="container container--sm">
+            <div class="shop__inner">
+                <div class="shop__filters">
+    
+                    @@include('./parts/product-page/_filter-category.html')
+                    @@include('./parts/product-page/_filter-price.html')
+                    @@include('./parts/product-page/_filter-brand.html')
+                    @@include('./parts/product-page/_recent.html')
+    
+                </div>   
+
+                <div class="shop-content">
+
+                    @@include('./parts/product-page/_shop-content-filter.html')
+                    @@include('./parts/product-page/_shop-content-items.html')
+                    @@include('./parts/product-page/_pagination.html')
+
+                </div>    
+            </div>
+        </div>
+        @@include('./parts/index-page/_partners.html')
+    </section>
+</main>
+
+@@include('./parts/components/_footer.html')
+
+@@include('./parts/components/_scripts.html')
