@@ -28,11 +28,7 @@
         padding: 0 5px 0 15px;
         font-size: 14px;
         line-height: 1.7;
-        color: $gray400;
-
-        &:hover {
-            color: $blue900;
-        }
+        color: $gray400;        
     }
 
     &__item:not(:first-child) {
@@ -41,6 +37,21 @@
             content: '/';
             position: absolute;
             left: 0;
+        }
+    }
+
+    &__link {
+        outline: transparent;
+        border-bottom: 1px solid transparent;
+        transition: color 0.5s, border-color 0.5s, font-weight 0.5s;
+
+        &:hover {
+            color: $blue900;
+            border-color: $blue900;
+        }
+
+        &:focus{
+            outline: dotted;
         }
     }
 }

@@ -16,6 +16,10 @@
 
     &__input {
 
+        &:hover+.filter-form__checkbox {
+            background-color: $blue300;
+        }
+
         &:checked+.filter-form__checkbox {
             background-color: $blue300;
         }
@@ -31,7 +35,6 @@
 
     &__text {
         line-height: 2.7;
-
     }
 }
 
