@@ -22,7 +22,7 @@
             position: fixed;
             background-color: $yellow600;
             padding: 10px 0;
-            box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.80);
+            box-shadow: 0px 6px 47px 3px $r-black800;
         }
     }
 
@@ -108,7 +108,7 @@
 
             @include r($md) {
                 background-color: $yellow600;
-                box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.80);
+                box-shadow: 0px 6px 47px 3px $r-black800;
             }
         }
     }
@@ -138,6 +138,31 @@
         &:focus {
             color: $black900;
             border-color: $black900;
+        }
+    }
+
+    &__button {
+        display: none;
+        z-index: 2;
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        right: 0;
+        transform: translateX(-50%);
+
+        @include r($md) {
+            display: block;
+        }
+
+        &--active {
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+
+        svg {
+            fill: $blue700;
+            transition: transform 0.5s;
         }
     }
 }
@@ -288,34 +313,6 @@
         @include r($lg) {
             background-color: transparent;
             margin-right: 0;
-        }
-
-    }
-}
-
-.menu {
-
-    &__button {
-        display: none;
-        z-index: 2;
-        border: none;
-        background-color: transparent;
-        position: absolute;
-        right: 0;
-        transform: translateX(-50%);
-
-        @include r($md) {
-            display: block;
-        }
-
-        &--active {
-            svg {
-                transform: rotate(90deg);
-            }
-        }
-
-        svg {
-            fill: $blue700;
         }
     }
 }

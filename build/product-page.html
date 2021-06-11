@@ -38,16 +38,14 @@
                     </li>
                 </ul>  
                 <button class="menu__button" type="button">
-                    <svg class="menu__icon" width="30" height="18" viewBox="0 0 30 18" fill="#fff">
-                        <path d="M0 0H30V2H0V0Z"></path>
-                        <path d="M0 8H30V10H0V8Z"></path>
-                        <rect y="16" width="30" height="2"></rect>
+                    <svg width="30" height="18">
+                        <use xlink:href="images/sprite.svg#menu-btn"></use>
                     </svg>
-                    <span class="sr-only">"Нажать" раскрыть меню навигации</span>
+                    <span class="visually-hidden">"Нажать" раскрыть меню навигации</span>
                 </button> 
                 <div class="user-nav">  
                     <a class="user-nav__link user-nav__link--search" href="#">
-                        <span class="sr-only">for search</span>
+                        <span class="visually-hidden">for search</span>
                         <svg width="22" height="18">
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -57,11 +55,11 @@
                             <svg width="22" height="18">
                                 <use xlink:href="images/sprite.svg#heart"></use>
                             </svg>
-                            <span class="sr-only">liked product</span>
+                            <span class="visually-hidden">liked product</span>
                             <span class="user-nav__number">0</span>
                         </a>
                         <a class="user-nav__link user-nav__link--cart" href="#">
-                            <span class="sr-only">basket</span>
+                            <span class="visually-hidden">basket</span>
                             <svg width="22" height="18">
                                 <use xlink:href="images/sprite.svg#cart"></use>
                             </svg>
@@ -70,7 +68,7 @@
                     </div>
 
                     <button class="user-nav__link user-nav__link--btn" type="button">
-                        <span class="sr-only">menu</span>
+                        <span class="visually-hidden">menu</span>
                         <svg width="21" height="21">
                             <use xlink:href="images/sprite.svg#user_btn"></use>
                         </svg>
@@ -83,39 +81,38 @@
 
 
 <main class="main">
-    <h1 class="sr-only">Glee- furniture and decor, your best choice.</h1>
+
     <div class="main-top">
     <div class="container">
-        <h2 class="title main-top__title">Product list</h2>
-        <div class="breadcrumbs">
-            <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link" href="#">
-                        Home
-                    </a>
-                </li>
-                <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link" href="#">
-                        Product list
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <h1 class="title main-top__title">Product list</h1>
+        <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="#">
+            Home
+        </a>
+    </li>
+    <li class="breadcrumbs__item">
+        <span>
+            Product list
+        </span>
+    </li>
+</ul>
     </div>
 </div>
 
-<section class="shop">
+    <section class="shop">
         <div class="container container--sm">
             <div class="shop__inner">
+
                 <div class="shop__filters">
     
-                    <div class="filter-category">
+    <div class="filter-category">
     <h3 class="filter-title">
         Category
     </h3>
-    <form class="filter-form" action="#">
+    <form class="filter-form">
         <label class="filter-form__label">
-            <input class="filter-form__input sr-only" type="checkbox" checked>
+            <input class="filter-form__input visually-hidden" type="checkbox" checked>
             <div class="filter-form__checkbox">
                 <span class="filter-form__text">
                     Chair
@@ -126,7 +123,7 @@
             </div>
         </label>
         <label class="filter-form__label">
-            <input class="filter-form__input sr-only" type="checkbox">
+            <input class="filter-form__input visually-hidden" type="checkbox">
             <div class="filter-form__checkbox">
                 <span class="filter-form__text">
                     Table
@@ -137,7 +134,7 @@
             </div>
         </label>
         <label class="filter-form__label">
-            <input class="filter-form__input sr-only" type="checkbox">
+            <input class="filter-form__input visually-hidden" type="checkbox">
             <div class="filter-form__checkbox">
                 <span class="filter-form__text">
                     Lamp
@@ -148,7 +145,7 @@
             </div>
         </label>
         <label class="filter-form__label">
-            <input class="filter-form__input sr-only" type="checkbox">
+            <input class="filter-form__input visually-hidden" type="checkbox">
             <div class="filter-form__checkbox">
                 <span class="filter-form__text">
                     Watch
@@ -159,7 +156,7 @@
             </div>
         </label>
         <label class="filter-form__label">
-            <input class="filter-form__input sr-only" type="checkbox">
+            <input class="filter-form__input visually-hidden" type="checkbox">
             <div class="filter-form__checkbox">
                 <span class="filter-form__text">
                     Clock
@@ -171,12 +168,12 @@
         </label>
     </form>
 </div>
-                    <div class="filter-price">
+    <div class="filter-price">
     <h3 class="filter-title">
         Price
     </h3>
-    <form class="filter-price__form" action="#">
-        <input class="filter-price__input" type="text" data-min="0" data-max="850" data-from="100"
+    <form class="filter-price__form">
+        <input class="filter-price__input" type="range" data-min="0" data-max="850" data-from="100"
             data-to="500">
         <div class="filter-price__inner">
             <div class="filter-price__box">
@@ -192,13 +189,13 @@
         </div>
     </form>
 </div>
-                    <div class="filter-brand">
+    <div class="filter-brand">
     <h3 class="filter-title">
         Brand
     </h3>
-    <form class="filter-form" action="#">
+    <form class="filter-form">
         <label class="filter-form__label">
-            <input class="filter-form__input sr-only" type="checkbox" checked>
+            <input class="filter-form__input visually-hidden" type="checkbox" checked>
             <div class="filter-form__checkbox">
                 <span class="filter-form__text">
                     RFL
@@ -209,7 +206,7 @@
             </div>
         </label>
         <label class="filter-form__label">
-            <input class="filter-form__input sr-only" type="checkbox">
+            <input class="filter-form__input visually-hidden" type="checkbox">
             <div class="filter-form__checkbox">
                 <span class="filter-form__text">
                     Brothers
@@ -220,7 +217,7 @@
             </div>
         </label>
         <label class="filter-form__label">
-            <input class="filter-form__input sr-only" type="checkbox">
+            <input class="filter-form__input visually-hidden" type="checkbox">
             <div class="filter-form__checkbox">
                 <span class="filter-form__text">
                     Regal
@@ -231,7 +228,7 @@
             </div>
         </label>
         <label class="filter-form__label">
-            <input class="filter-form__input sr-only" type="checkbox">
+            <input class="filter-form__input visually-hidden" type="checkbox">
             <div class="filter-form__checkbox">
                 <span class="filter-form__text">
                     Nadia
@@ -242,7 +239,7 @@
             </div>
         </label>
         <label class="filter-form__label">
-            <input class="filter-form__input sr-only" type="checkbox">
+            <input class="filter-form__input visually-hidden" type="checkbox">
             <div class="filter-form__checkbox">
                 <span class="filter-form__text">
                     Otobi
@@ -254,16 +251,15 @@
         </label>
     </form>
 </div>
-                    <div class="recent">
+    <div class="recent">
     <h3 class="filter-title">
         Recent products
     </h3>
     <ul class="recent__products">
         <li class="recent__item">
             <article class="recent-card">
-                <a href="" class="recent-card__link">
-                    <img class="recent-card__img" src="images/content/products/recent/lamp1.png"
-                        alt="pendant lamp">
+                <a class="recent-card__link" href="#">
+                    <img class="recent-card__img" src="images/content/products/recent/lamp1.png" alt="pendant lamp">
                     <div class="recent-card__box">
                         <h4 class="recent-card__title">
                             Pendant lamp
@@ -276,9 +272,8 @@
         </li>
         <li class="recent__item">
             <article class="recent-card">
-                <a href="" class="recent-card__link">
-                    <img class="recent-card__img" src="images/content/products/recent/lamp2.png"
-                        alt="pendant lamp">
+                <a class="recent-card__link" href="#">
+                    <img class="recent-card__img" src="images/content/products/recent/lamp2.png" alt="pendant lamp">
                     <div class="recent-card__box">
                         <h4 class="recent-card__title">
                             Pendant lamp
@@ -291,9 +286,8 @@
         </li>
         <li class="recent__item">
             <article class="recent-card">
-                <a href="" class="recent-card__link">
-                    <img class="recent-card__img" src="images/content/products/recent/lamp3.png"
-                        alt="pendant lamp">
+                <a class="recent-card__link" href="#">
+                    <img class="recent-card__img" src="images/content/products/recent/lamp3.png" alt="pendant lamp">
                     <div class="recent-card__box">
                         <h4 class="recent-card__title">
                             Pendant lamp
@@ -306,30 +300,205 @@
         </li>
     </ul>
 </div>
-    
-                </div>   
+
+</div>   
 
                 <div class="shop-content">
 
                     <div class="shop-content__filter">
     <span class="shop-content__text">View:</span>
-    <button class="shop-content__btn shop-content__btn--active button-grid">
-        <svg width="20" height="20">
-            <use xlink:href="images/sprite.svg#grid"></use>
-        </svg>
-    </button>
-    <button class="shop-content__btn button-list">
-        <svg width="20" height="20">
-            <use xlink:href="images/sprite.svg#list"></use>
-        </svg>
-    </button>
+    <ul class="shop-content__list">
+        <li class="shop-content__box">
+            <button class="shop-content__btn shop-content__btn--active button-grid">
+                <span class="visually-hidden">view grid</span>
+                <svg width="20" height="20">
+                    <use xlink:href="images/sprite.svg#grid"></use>
+                </svg>
+            </button>
+        </li>
+        <li class="shop-content__box">
+            <button class="shop-content__btn button-list">
+                <span class="visually-hidden">view list</span>
+                <svg width="20" height="20">
+                    <use xlink:href="images/sprite.svg#list"></use>
+                </svg>
+            </button>
+        </li>
+    </ul>
 </div>
                     <ul class="shop-content__items">
     <li class="shop-content__inner">
         <article class="product-card">
             <div class="product-card__wrapper">
-                <img class="product-card__img" src="images/content/products/wooden_radio.png"
-                    alt="Wooden radio">
+                <img class="product-card__img" src="images/content/products/wooden_radio.png" alt="Wooden radio">
+            </div>
+            <div class="product-card__box">
+                <h3 class="product-card__subtitle">Wooden radio</h3>
+                <div class="star-list" data-rateyo-rating="4"></div>
+                <span class="product-card__count product-card__count--list">
+                    <span>$</span>
+                    29.00
+                </span>
+                <p>
+                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </p>
+                <ul class="product-card__icons">
+                    <li class="product-card__item">
+                        <a class="product-card__btn" href="#">
+                            <svg width="22" height="18">
+                                <use xlink:href="images/sprite.svg#search"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="product-card__item">
+                        <button class="product-card__btn" type="button">
+                            <svg width="22" height="18">
+                                <use xlink:href="images/sprite.svg#cart"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="product-card__item">
+                        <button class="product-card__btn" type="button">
+                            <svg width="22" height="18">
+                                <use xlink:href="images/sprite.svg#heart"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </li>
+    <li class="shop-content__inner">
+        <article class="product-card">
+            <div class="product-card__wrapper">
+                <img class="product-card__img" src="images/content/products/wooden_chair.png" alt="Wooden chair">
+            </div>
+            <div class="product-card__box">
+                <h3 class="product-card__subtitle">Wooden chair</h3>
+                <div class="star-list" data-rateyo-rating="4"></div>
+                <span class="product-card__count product-card__count--list">
+                    <span>$</span>
+                    29.00
+                </span>
+                <p>
+                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </p>
+                <ul class="product-card__icons">
+                    <li class="product-card__item">
+                        <a class="product-card__btn" href="#">
+                            <svg width="22" height="18">
+                                <use xlink:href="images/sprite.svg#search"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="product-card__item">
+                        <button class="product-card__btn" type="button">
+                            <svg width="22" height="18">
+                                <use xlink:href="images/sprite.svg#cart"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="product-card__item">
+                        <button class="product-card__btn" type="button">
+                            <svg width="22" height="18">
+                                <use xlink:href="images/sprite.svg#heart"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </li>
+    <li class="shop-content__inner">
+        <article class="product-card">
+            <div class="product-card__wrapper">
+                <img class="product-card__img" src="images/content/products/white_chair.png" alt="White chair">
+            </div>
+            <div class="product-card__box">
+                <h3 class="product-card__subtitle">White chair</h3>
+                <div class="star-list" data-rateyo-rating="4"></div>
+                <span class="product-card__count product-card__count--list">
+                    <span>$</span>
+                    29.00
+                </span>
+                <p>
+                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </p>
+                <ul class="product-card__icons">
+                    <li class="product-card__item">
+                        <a class="product-card__btn" href="#">
+                            <svg width="22" height="18">
+                                <use xlink:href="images/sprite.svg#search"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="product-card__item">
+                        <button class="product-card__btn" type="button">
+                            <svg width="22" height="18">
+                                <use xlink:href="images/sprite.svg#cart"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="product-card__item">
+                        <button class="product-card__btn" type="button">
+                            <svg width="22" height="18">
+                                <use xlink:href="images/sprite.svg#heart"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </li>
+    <li class="shop-content__inner">
+        <article class="product-card">
+            <div class="product-card__wrapper">
+                <img class="product-card__img" src="images/content/products/retro_table.png" alt="Retro table">
+            </div>
+            <div class="product-card__box">
+                <h3 class="product-card__subtitle">Retro table</h3>
+                <div class="star-list" data-rateyo-rating="4"></div>
+                <span class="product-card__count product-card__count--list">
+                    <span>$</span>
+                    29.00
+                </span>
+                <p>
+                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </p>
+                <ul class="product-card__icons">
+                    <li class="product-card__item">
+                        <a class="product-card__btn" href="#">
+                            <svg width="22" height="18">
+                                <use xlink:href="images/sprite.svg#search"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="product-card__item">
+                        <button class="product-card__btn" type="button">
+                            <svg width="22" height="18">
+                                <use xlink:href="images/sprite.svg#cart"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="product-card__item">
+                        <button class="product-card__btn" type="button">
+                            <svg width="22" height="18">
+                                <use xlink:href="images/sprite.svg#heart"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </li>
+    <li class="shop-content__inner shop-content__inner--grid">
+        <article class="product-card">
+            <div class="product-card__wrapper">
+                <img class="product-card__img" src="images/content/products/radio.png" alt="Wooden radio">
             </div>
             <div class="product-card__box">
                 <h3 class="product-card__subtitle">Wooden radio</h3>
@@ -338,11 +507,7 @@
                     <span>$</span>
                     29.00
                 </span>
-                <span class="product-card__count--list">
-                    23
-                    <span>$</span>
-                </span>
-                <p class="product-card__text">
+                <p>
                     consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
@@ -372,11 +537,52 @@
             </ul>
         </article>
     </li>
-    <li class="shop-content__inner">
+    <li class="shop-content__inner shop-content__inner--grid">
         <article class="product-card">
             <div class="product-card__wrapper">
-                <img class="product-card__img" src="images/content/products/wooden_chair.png"
-                    alt="Wooden chair">
+                <img class="product-card__img" src="images/content/products/retro_table.png" alt="Retro table">
+            </div>
+            <div class="product-card__box">
+                <h3 class="product-card__subtitle">Retro table</h3>
+                <div class="star-list" data-rateyo-rating="4"></div>
+                <span class="product-card__count">
+                    <span>$</span>
+                    29.00
+                </span>
+                <p>
+                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </p>
+            </div>
+            <ul class="product-card__icons">
+                <li class="product-card__item">
+                    <a class="product-card__btn" href="#">
+                        <svg width="22" height="18">
+                            <use xlink:href="images/sprite.svg#search"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="product-card__item">
+                    <button class="product-card__btn" type="button">
+                        <svg width="22" height="18">
+                            <use xlink:href="images/sprite.svg#cart"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li class="product-card__item">
+                    <button class="product-card__btn" type="button">
+                        <svg width="22" height="18">
+                            <use xlink:href="images/sprite.svg#heart"></use>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </article>
+    </li>
+    <li class="shop-content__inner shop-content__inner--grid">
+        <article class="product-card">
+            <div class="product-card__wrapper">
+                <img class="product-card__img" src="images/content/products/chair.png" alt="Wooden chair">
             </div>
             <div class="product-card__box">
                 <h3 class="product-card__subtitle">Wooden chair</h3>
@@ -385,11 +591,7 @@
                     <span>$</span>
                     29.00
                 </span>
-                <span class="product-card__count--list">
-                    23
-                    <span>$</span>
-                </span>
-                <p class="product-card__text">
+                <p>
                     consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
@@ -419,11 +621,10 @@
             </ul>
         </article>
     </li>
-    <li class="shop-content__inner">
+    <li class="shop-content__inner shop-content__inner--grid">
         <article class="product-card">
             <div class="product-card__wrapper">
-                <img class="product-card__img" src="images/content/products/white_chair.png"
-                    alt="White chair">
+                <img class="product-card__img" src="images/content/products/whitechair.png" alt="White chair">
             </div>
             <div class="product-card__box">
                 <h3 class="product-card__subtitle">White chair</h3>
@@ -432,11 +633,7 @@
                     <span>$</span>
                     29.00
                 </span>
-                <span class="product-card__count--list">
-                    23
-                    <span>$</span>
-                </span>
-                <p class="product-card__text">
+                <p>
                     consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
@@ -466,11 +663,10 @@
             </ul>
         </article>
     </li>
-    <li class="shop-content__inner">
+    <li class="shop-content__inner shop-content__inner--grid">
         <article class="product-card">
             <div class="product-card__wrapper">
-                <img class="product-card__img" src="images/content/products/retro_table.png"
-                    alt="Retro table">
+                <img class="product-card__img" src="images/content/products/table.png" alt="Retro table">
             </div>
             <div class="product-card__box">
                 <h3 class="product-card__subtitle">Retro table</h3>
@@ -479,246 +675,7 @@
                     <span>$</span>
                     29.00
                 </span>
-                <span class="product-card__count--list">
-                    23
-                    <span>$</span>
-                </span>
-                <p class="product-card__text">
-                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                </p>
-            </div>
-            <ul class="product-card__icons">
-                <li class="product-card__item">
-                    <a class="product-card__btn" href="#">
-                        <svg width="22" height="18">
-                            <use xlink:href="images/sprite.svg#search"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="product-card__item">
-                    <button class="product-card__btn" type="button">
-                        <svg width="22" height="18">
-                            <use xlink:href="images/sprite.svg#cart"></use>
-                        </svg>
-                    </button>
-                </li>
-                <li class="product-card__item">
-                    <button class="product-card__btn" type="button">
-                        <svg width="22" height="18">
-                            <use xlink:href="images/sprite.svg#heart"></use>
-                        </svg>
-                    </button>
-                </li>
-            </ul>
-        </article>
-    </li>
-    <li class="shop-content__inner shop-content__inner--grid">
-        <article class="product-card">
-            <div class="product-card__wrapper">
-                <img class="product-card__img" src="images/content/products/radio.png"
-                    alt="Wooden radio">
-            </div>
-            <div class="product-card__box">
-                <h3 class="product-card__subtitle">Wooden radio</h3>
-                <div class="star-list" data-rateyo-rating="4"></div>
-                <span class="product-card__count">
-                    <span>$</span>
-                    29.00
-                </span>
-                <span class="product-card__count--list">
-                    23
-                    <span>$</span>
-                </span>
-                <p class="product-card__text">
-                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                </p>
-            </div>
-            <ul class="product-card__icons">
-                <li class="product-card__item">
-                    <a class="product-card__btn" href="#">
-                        <svg width="22" height="18">
-                            <use xlink:href="images/sprite.svg#search"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="product-card__item">
-                    <button class="product-card__btn" type="button">
-                        <svg width="22" height="18">
-                            <use xlink:href="images/sprite.svg#cart"></use>
-                        </svg>
-                    </button>
-                </li>
-                <li class="product-card__item">
-                    <button class="product-card__btn" type="button">
-                        <svg width="22" height="18">
-                            <use xlink:href="images/sprite.svg#heart"></use>
-                        </svg>
-                    </button>
-                </li>
-            </ul>
-        </article>
-    </li>
-    <li class="shop-content__inner shop-content__inner--grid">
-        <article class="product-card">
-            <div class="product-card__wrapper">
-                <img class="product-card__img" src="images/content/products/retro_table.png"
-                    alt="Retro table">
-            </div>
-            <div class="product-card__box">
-                <h3 class="product-card__subtitle">Retro table</h3>
-                <div class="star-list" data-rateyo-rating="4"></div>
-                <span class="product-card__count">
-                    <span>$</span>
-                    29.00
-                </span>
-                <span class="product-card__count--list">
-                    23
-                    <span>$</span>
-                </span>
-                <p class="product-card__text">
-                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                </p>
-            </div>
-            <ul class="product-card__icons">
-                <li class="product-card__item">
-                    <a class="product-card__btn" href="#">
-                        <svg width="22" height="18">
-                            <use xlink:href="images/sprite.svg#search"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="product-card__item">
-                    <button class="product-card__btn" type="button">
-                        <svg width="22" height="18">
-                            <use xlink:href="images/sprite.svg#cart"></use>
-                        </svg>
-                    </button>
-                </li>
-                <li class="product-card__item">
-                    <button class="product-card__btn" type="button">
-                        <svg width="22" height="18">
-                            <use xlink:href="images/sprite.svg#heart"></use>
-                        </svg>
-                    </button>
-                </li>
-            </ul>
-        </article>
-    </li>
-    <li class="shop-content__inner shop-content__inner--grid">
-        <article class="product-card">
-            <div class="product-card__wrapper">
-                <img class="product-card__img" src="images/content/products/chair.png"
-                    alt="Wooden chair">
-            </div>
-            <div class="product-card__box">
-                <h3 class="product-card__subtitle">Wooden chair</h3>
-                <div class="star-list" data-rateyo-rating="4"></div>
-                <span class="product-card__count">
-                    <span>$</span>
-                    29.00
-                </span>
-                <span class="product-card__count--list">
-                    23
-                    <span>$</span>
-                </span>
-                <p class="product-card__text">
-                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                </p>
-            </div>
-            <ul class="product-card__icons">
-                <li class="product-card__item">
-                    <a class="product-card__btn" href="#">
-                        <svg width="22" height="18">
-                            <use xlink:href="images/sprite.svg#search"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="product-card__item">
-                    <button class="product-card__btn" type="button">
-                        <svg width="22" height="18">
-                            <use xlink:href="images/sprite.svg#cart"></use>
-                        </svg>
-                    </button>
-                </li>
-                <li class="product-card__item">
-                    <button class="product-card__btn" type="button">
-                        <svg width="22" height="18">
-                            <use xlink:href="images/sprite.svg#heart"></use>
-                        </svg>
-                    </button>
-                </li>
-            </ul>
-        </article>
-    </li>
-    <li class="shop-content__inner shop-content__inner--grid">
-        <article class="product-card">
-            <div class="product-card__wrapper">
-                <img class="product-card__img" src="images/content/products/whitechair.png"
-                    alt="White chair">
-            </div>
-            <div class="product-card__box">
-                <h3 class="product-card__subtitle">White chair</h3>
-                <div class="star-list" data-rateyo-rating="4"></div>
-                <span class="product-card__count">
-                    <span>$</span>
-                    29.00
-                </span>
-                <span class="product-card__count--list">
-                    23
-                    <span>$</span>
-                </span>
-                <p class="product-card__text">
-                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                </p>
-            </div>
-            <ul class="product-card__icons">
-                <li class="product-card__item">
-                    <a class="product-card__btn" href="#">
-                        <svg width="22" height="18">
-                            <use xlink:href="images/sprite.svg#search"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="product-card__item">
-                    <button class="product-card__btn" type="button">
-                        <svg width="22" height="18">
-                            <use xlink:href="images/sprite.svg#cart"></use>
-                        </svg>
-                    </button>
-                </li>
-                <li class="product-card__item">
-                    <button class="product-card__btn" type="button">
-                        <svg width="22" height="18">
-                            <use xlink:href="images/sprite.svg#heart"></use>
-                        </svg>
-                    </button>
-                </li>
-            </ul>
-        </article>
-    </li>
-    <li class="shop-content__inner shop-content__inner--grid">
-        <article class="product-card">
-            <div class="product-card__wrapper">
-                <img class="product-card__img" src="images/content/products/table.png"
-                    alt="Retro table">
-            </div>
-            <div class="product-card__box">
-                <h3 class="product-card__subtitle">Retro table</h3>
-                <div class="star-list" data-rateyo-rating="4"></div>
-                <span class="product-card__count">
-                    <span>$</span>
-                    29.00
-                </span>
-                <span class="product-card__count--list">
-                    23
-                    <span>$</span>
-                </span>
-                <p class="product-card__text">
+                <p>
                     consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
@@ -751,7 +708,7 @@
 </ul>
                     <ul class="pagination">
     <li class="pagination__item">
-        <a class="pagination__link pagination__link--active" href="#">1</a>
+        <span class="pagination__link pagination__link--active">1</span>
     </li>
     <li class="pagination__item">
         <a class="pagination__link" href="#">2</a>
@@ -766,8 +723,10 @@
 
                 </div>    
             </div>
-        </div>
-        <div class="partners">
+        </div>        
+    </section>
+
+    <div class="partners">
     <div class="container container--sm">
        
         <ul class="partners__items">
@@ -807,7 +766,7 @@
     
     </div>
 </div>
-    </section>
+
 </main>
 
 <footer class="footer">
@@ -876,7 +835,7 @@
                     <p>Subscribe by our newsletter and get update protidin.</p>
                 </div>
                 <form class="news-form">
-                    <label class="sr-only" for="newsletter">enter your email</label>
+                    <label class="visually-hidden" for="newsletter">enter your email</label>
                     <input class="news-form__input" type="email" id="newsletter" name="newsletter[footer]"
                         placeholder="Email address" required>
                     <button class="news-form__btn" type="submit">Subscribe</button>

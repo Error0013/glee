@@ -1,0 +1,73 @@
+.team-card {
+
+    &__img {
+        max-width: 370px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: translateY(-50%);
+        max-width: 325px;
+        width: 100%;
+        padding: 20px 25px 15px;
+        ;
+        background-color: $white;
+        box-shadow: 0px 6px 57px 0px $r-black005;
+    }
+
+    &__name {
+        display: block;
+        font-family: $dmsans;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 1.4;
+        color: $blue700;
+        @include clamp(1);
+    }
+
+    &__profession {
+        line-height: 2.1;
+        color: $purple200;
+        @include clamp(1);
+    }
+
+    &__items {
+        display: flex;
+    }
+
+    &__item {
+
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $gray500;
+        transition: background-color 0.5s;
+
+        &:hover {
+            background-color: $blue500;
+
+            svg {
+                fill: $yellow500;
+                transition: fill 0.5s;
+            }
+        }
+
+        svg {
+            fill: $gray600;
+        }
+    }
+}

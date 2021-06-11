@@ -39,16 +39,14 @@
                     </li>
                 </ul>  
                 <button class="menu__button" type="button">
-                    <svg class="menu__icon" width="30" height="18" viewBox="0 0 30 18" fill="#fff">
-                        <path d="M0 0H30V2H0V0Z"></path>
-                        <path d="M0 8H30V10H0V8Z"></path>
-                        <rect y="16" width="30" height="2"></rect>
+                    <svg width="30" height="18">
+                        <use xlink:href="images/sprite.svg#menu-btn"></use>
                     </svg>
-                    <span class="sr-only">"Нажать" раскрыть меню навигации</span>
+                    <span class="visually-hidden">"Нажать" раскрыть меню навигации</span>
                 </button> 
                 <div class="user-nav">  
                     <a class="user-nav__link user-nav__link--search" href="#">
-                        <span class="sr-only">for search</span>
+                        <span class="visually-hidden">for search</span>
                         <svg width="22" height="18">
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -58,11 +56,11 @@
                             <svg width="22" height="18">
                                 <use xlink:href="images/sprite.svg#heart"></use>
                             </svg>
-                            <span class="sr-only">liked product</span>
+                            <span class="visually-hidden">liked product</span>
                             <span class="user-nav__number">0</span>
                         </a>
                         <a class="user-nav__link user-nav__link--cart" href="#">
-                            <span class="sr-only">basket</span>
+                            <span class="visually-hidden">basket</span>
                             <svg width="22" height="18">
                                 <use xlink:href="images/sprite.svg#cart"></use>
                             </svg>
@@ -71,7 +69,7 @@
                     </div>
 
                     <button class="user-nav__link user-nav__link--btn" type="button">
-                        <span class="sr-only">menu</span>
+                        <span class="visually-hidden">menu</span>
                         <svg width="21" height="21">
                             <use xlink:href="images/sprite.svg#user_btn"></use>
                         </svg>
@@ -84,9 +82,10 @@
 
 
 <main class="main">
-    <h1 class="sr-only">Glee- furniture and decor, your best choice.</h1>
+    <h1 class="visually-hidden">Glee- furniture and decor, your best choice.</h1>
 
     <section class="trendy-slider">
+    <h2 class="visually-hidden">Smart and trendy</h2>
     <div class="container">
         <ul class="trendy-slider__items">
             <li class="trendy-slider__item">
@@ -522,19 +521,19 @@
         <div class="container">
             <ul class="products-week__bottom-items">
                 <li class="products-week__bottom-wrapper">
-                    <article class="product-lamp">
-                        <img class="product-lamp__img" src="images/content/products/lamp_cat.png"
+                    <article class="product-popular">
+                        <img class="product-popular__img" src="images/content/products/lamp_cat.png"
                             alt="Mirum Notare Tellus">
-                        <div class="product-lamp__inner">
-                            <h3 class="product-lamp__title">
+                        <div class="product-popular__inner">
+                            <h3 class="product-popular__title">
                                 Mirum Notare Tellus
                             </h3>
-                            <div class="product-lamp__text">
+                            <div class="product-popular__text">
                                 <p>
                                     LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
                                 </p>
                             </div>
-                            <a class="button product-lamp__link" href="#">
+                            <a class="button product-popular__link" href="#">
                                 View More
                                 <svg width="22" height="9">
                                     <use xlink:href="images/sprite.svg#arrow_btn"></use>
@@ -544,19 +543,19 @@
                     </article>
                 </li>
                 <li class="products-week__bottom-wrapper">
-                    <article class="product-lamp">
-                        <img class="product-lamp__img" src="images/content/products/lamp_small.png"
+                    <article class="product-popular">
+                        <img class="product-popular__img" src="images/content/products/lamp_small.png"
                             alt="Malesuada Tempor Euismod">
-                        <div class="product-lamp__inner">
-                            <h3 class="product-lamp__title">
+                        <div class="product-popular__inner">
+                            <h3 class="product-popular__title">
                                 Malesuada Tempor Euismod
                             </h3>
-                            <div class="product-lamp__text">
+                            <div class="product-popular__text">
                                 <p>
                                     50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
                                 </p>
                             </div>
-                            <a class="button product-lamp__link" href="#">
+                            <a class="button product-popular__link" href="#">
                                 View More
                                 <svg width="22" height="9">
                                     <use xlink:href="images/sprite.svg#arrow_btn"></use>
@@ -702,7 +701,7 @@
                 d="M970.684 3900.74l-16.044 9.8a3.228 3.228 0 01-3.062.14 2.685 2.685 0 01-1.579-2.39v-19.59a2.685 2.685 0 011.579-2.39 3.258 3.258 0 013.062.15l16.044 9.79a2.666 2.666 0 011.316 2.25 2.638 2.638 0 01-1.316 2.24z"
                 transform="translate(-897 -3836)" />
         </svg>
-        <span class="sr-only">Play video</span>
+        <span class="visually-hidden">Play video</span>
     </a>
 </div>
 
@@ -730,14 +729,18 @@
                             Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                         </h3>
                         <div class="articles-card__bottom">
-                            <svg width="12" height="12">
-                                <use xlink:href="images/sprite.svg#calendar"></use>
-                            </svg>
-                            <time class="articles-card__date" datetime="2020-01-28">28 january, 2020</time>
-                            <svg width="12" height="12">
-                                <use xlink:href="images/sprite.svg#user"></use>
-                            </svg>
-                            <a class="articles-card__copy" href="#">By admin</a>
+                            <div class="articles-card__date">
+                                <svg width="12" height="12">
+                                    <use xlink:href="images/sprite.svg#calendar"></use>
+                                </svg>
+                                <time class="articles-card__time" datetime="2020-01-28">28 january, 2020</time>
+                            </div>
+                            <div class="articles-card__copy">
+                                <svg width="12" height="12">
+                                    <use xlink:href="images/sprite.svg#user"></use>
+                                </svg>
+                                <a class="articles-card__copy-link" href="#">By admin</a>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -755,14 +758,18 @@
                             Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                         </h3>
                         <div class="articles-card__bottom">
-                            <svg width="12" height="12">
-                                <use xlink:href="images/sprite.svg#calendar"></use>
-                            </svg>
-                            <time class="articles-card__date" datetime="2020-01-28">28 january, 2020</time>
-                            <svg width="12" height="12">
-                                <use xlink:href="images/sprite.svg#user"></use>
-                            </svg>
-                            <a class="articles-card__copy" href="#">By admin</a>
+                            <div class="articles-card__date">
+                                <svg width="12" height="12">
+                                    <use xlink:href="images/sprite.svg#calendar"></use>
+                                </svg>
+                                <time class="articles-card__time" datetime="2020-01-28">28 january, 2020</time>
+                            </div>
+                            <div class="articles-card__copy">
+                                <svg width="12" height="12">
+                                    <use xlink:href="images/sprite.svg#user"></use>
+                                </svg>
+                                <a class="articles-card__copy-link" href="#">By admin</a>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -780,14 +787,18 @@
                             Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                         </h3>
                         <div class="articles-card__bottom">
-                            <svg width="12" height="12">
-                                <use xlink:href="images/sprite.svg#calendar"></use>
-                            </svg>
-                            <time class="articles-card__date" datetime="2020-01-28">28 january, 2020</time>
-                            <svg width="12" height="12">
-                                <use xlink:href="images/sprite.svg#user"></use>
-                            </svg>
-                            <a class="articles-card__copy" href="#">By admin</a>
+                            <div class="articles-card__date">
+                                <svg width="12" height="12">
+                                    <use xlink:href="images/sprite.svg#calendar"></use>
+                                </svg>
+                                <time class="articles-card__time" datetime="2020-01-28">28 january, 2020</time>
+                            </div>
+                            <div class="articles-card__copy">
+                                <svg width="12" height="12">
+                                    <use xlink:href="images/sprite.svg#user"></use>
+                                </svg>
+                                <a class="articles-card__copy-link" href="#">By admin</a>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -904,7 +915,7 @@
                     <p>Subscribe by our newsletter and get update protidin.</p>
                 </div>
                 <form class="news-form">
-                    <label class="sr-only" for="newsletter">enter your email</label>
+                    <label class="visually-hidden" for="newsletter">enter your email</label>
                     <input class="news-form__input" type="email" id="newsletter" name="newsletter[footer]"
                         placeholder="Email address" required>
                     <button class="news-form__btn" type="submit">Subscribe</button>

@@ -1,19 +1,8 @@
 <div class="main-top">
     <div class="container">
-        <h2 class="title main-top__title">Product list</h2>
-        <div class="breadcrumbs">
-            <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link" href="#">
-                        Home
-                    </a>
-                </li>
-                <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link" href="#">
-                        Product list
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <h1 class="title main-top__title">@@mt_title</h1>
+        @@include('./_breadcrumbs.html', {
+            "page": "@@mt_title"
+        })
     </div>
 </div>

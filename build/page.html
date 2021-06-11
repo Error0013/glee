@@ -39,16 +39,14 @@
                     </li>
                 </ul>  
                 <button class="menu__button" type="button">
-                    <svg class="menu__icon" width="30" height="18" viewBox="0 0 30 18" fill="#fff">
-                        <path d="M0 0H30V2H0V0Z"></path>
-                        <path d="M0 8H30V10H0V8Z"></path>
-                        <rect y="16" width="30" height="2"></rect>
+                    <svg width="30" height="18">
+                        <use xlink:href="images/sprite.svg#menu-btn"></use>
                     </svg>
-                    <span class="sr-only">"Нажать" раскрыть меню навигации</span>
+                    <span class="visually-hidden">"Нажать" раскрыть меню навигации</span>
                 </button> 
                 <div class="user-nav">  
                     <a class="user-nav__link user-nav__link--search" href="#">
-                        <span class="sr-only">for search</span>
+                        <span class="visually-hidden">for search</span>
                         <svg width="22" height="18">
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -58,11 +56,11 @@
                             <svg width="22" height="18">
                                 <use xlink:href="images/sprite.svg#heart"></use>
                             </svg>
-                            <span class="sr-only">liked product</span>
+                            <span class="visually-hidden">liked product</span>
                             <span class="user-nav__number">0</span>
                         </a>
                         <a class="user-nav__link user-nav__link--cart" href="#">
-                            <span class="sr-only">basket</span>
+                            <span class="visually-hidden">basket</span>
                             <svg width="22" height="18">
                                 <use xlink:href="images/sprite.svg#cart"></use>
                             </svg>
@@ -71,7 +69,7 @@
                     </div>
 
                     <button class="user-nav__link user-nav__link--btn" type="button">
-                        <span class="sr-only">menu</span>
+                        <span class="visually-hidden">menu</span>
                         <svg width="21" height="21">
                             <use xlink:href="images/sprite.svg#user_btn"></use>
                         </svg>
@@ -84,7 +82,7 @@
 
 
 <main class="main">
-    <h1 class="sr-only">Glee- furniture and decor, your best choice.</h1>
+    <h1 class="visually-hidden">Glee- furniture and decor, your best choice.</h1>
 
 
 
@@ -156,7 +154,7 @@
                     <p>Subscribe by our newsletter and get update protidin.</p>
                 </div>
                 <form class="news-form">
-                    <label class="sr-only" for="newsletter">enter your email</label>
+                    <label class="visually-hidden" for="newsletter">enter your email</label>
                     <input class="news-form__input" type="email" id="newsletter" name="newsletter[footer]"
                         placeholder="Email address" required>
                     <button class="news-form__btn" type="submit">Subscribe</button>

@@ -2,11 +2,17 @@
     margin-bottom: 55px;
 
     @include r($mob) {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 }
 
 .filter-form {
+
+    @include r($mob) {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s;
+    }
 
     &__label {
         position: relative;
@@ -14,10 +20,20 @@
         cursor: pointer;
     }
 
+    &__box {
+        color: $blue500;
+    }
+
     &__input {
 
         &:hover+.filter-form__checkbox {
             background-color: $blue300;
+        }
+
+        &:checked+.filter-form__checkbox {
+            .filter-form__box {
+                color: $blue900;
+            }
         }
 
         &:checked+.filter-form__checkbox {
@@ -31,11 +47,14 @@
         justify-content: space-between;
         padding: 0 20px 0 15px;
         border-radius: 5px;
+        transition: background-color 0.5s;
     }
 
     &__text {
         line-height: 2.7;
     }
+
+
 }
 
 .filter-title {
@@ -46,7 +65,11 @@
     font-weight: 700;
     font-size: 18px;
     padding-right: 55px;
-    margin-bottom: 25px;   
+    margin-bottom: 25px;
+
+    @include r($mob) {
+        margin-bottom: 10px;
+    }
 
     &::after {
         content: '';
@@ -64,7 +87,7 @@
     margin-bottom: 70px;
 
     @include r($mob) {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 
     &__inner {
@@ -76,6 +99,15 @@
         display: flex;
         font-size: 14px;
         line-height: 3;
+    }
+
+    &__form {
+
+        @include r($mob) {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1s;
+        }
     }
 }
 
@@ -92,6 +124,7 @@
     width: 15px;
     height: 15px;
     background-color: $blue500;
+    cursor: pointer;
 }
 
 .irs--flat .irs-handle>i:first-child {
@@ -124,7 +157,7 @@
     margin-bottom: 50px;
 
     @include r($mob) {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 
     .filter-form {
@@ -143,8 +176,17 @@
 
 .recent {
 
+    &__products {
+
+        @include r($mob) {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1s;
+        }
+    }
+
     @include r($mob) {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     &__item:not(:last-child) {
@@ -159,7 +201,7 @@
         transition: box-shadow 0.5s;
 
         &:hover {
-            box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.10);
+            box-shadow: 0px 6px 47px 3px $r-black010;
         }
     }
 

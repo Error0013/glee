@@ -58,14 +58,14 @@
         border: 1px solid transparent;
         border-radius: 50%;
         background-color: $white;
-        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.40);
+        box-shadow: 0px 6px 47px 3px $r-black400;
         transition: fill 0.3s, background-color 0.3s, box-shadow 0.3s;
         outline: transparent;
 
         &:hover {
             background-color: $blue500;
             fill: $white;
-            box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.80);
+            box-shadow: 0px 6px 47px 3px $r-black800;
         }
 
         &:focus {

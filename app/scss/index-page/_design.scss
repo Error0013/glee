@@ -67,7 +67,7 @@
 
             .fcls-1,
             .fcls-2 {
-                fill: #a3bbc8;
+                fill: $blue500;
             }
 
             .fcls-1 {
@@ -75,7 +75,7 @@
             }
 
             .fcls-3 {
-                fill: #fff;
+                fill: $white;
                 fill-rule: evenodd;
                 transition: fill 0.5s;
             }

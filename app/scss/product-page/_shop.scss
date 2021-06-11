@@ -6,7 +6,7 @@
     }
 
     @include r($mob) {
-        padding-top: 50px;
+        padding-top: 30px;
     }
 
     &__inner {
@@ -16,30 +16,46 @@
             flex-direction: column;
         }
 
-        @include r($mob) {
-            
-        }
     }
 
     &__filters {
-        width: 270px;
+        max-width: 270px;
+        width: 100%;
         margin-right: 30px;
+
+        @include r($sm) {
+            opacity: 0;
+            transition: opacity 1.5s, width 2.5s;
+            width: 0px;
+        }
 
         @include r($mob) {
             margin-right: 0;
+            max-width: unset;
             width: 90%;
             margin: 0 auto;
+            opacity: unset;
+        }
+
+        &--list {
+            display: block;
+            opacity: 1;
+            width: 100%;  
+            
+            @include r($mob) {
+                width: 90%;
+            }
         }
     }
+}
 
-    .partners {
-        padding-top: 0;
+.shop+.partners {
+    padding-top: 0;
 
-        &__items {
+    &__items {
 
-            @include r($md) {
-                padding: 50px 0;
-            }
+        @include r($md) {
+            padding: 50px 0;
         }
     }
 }

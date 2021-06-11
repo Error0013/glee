@@ -1,0 +1,107 @@
+.about-info {
+    background-color: $yellow400;
+    padding: 85px 0 75px;
+
+    @include r($md) {
+        padding: 50px 0;
+    }
+
+    &__items {
+        display: flex;
+        align-items: flex-end;
+
+        @include r($md) {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @include r($mob) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 270px;
+        width: 100%;
+        font-family: $dmsans;
+        font-weight: 700;
+
+        @include r($md) {
+            max-width: none;
+            width: 49%;
+        }
+
+        @include r($mob) {
+            width: 100%;
+        }
+
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+
+        @include r($md) {
+            margin-right: 0;
+        }
+
+        @include r($mob) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__img {
+        background-repeat: no-repeat;
+        margin-bottom: 15px;
+        background-size: cover;
+
+        @include r($mob) {
+            margin-bottom: 0;
+        }
+
+        &--rate {
+            width: 75px;
+            height: 60px;
+            background-image: url(../images/content/about/icons/about1.svg);
+        }
+
+        &--delivered {
+            width: 72px;
+            height: 51px;
+            background-image: url(../images/content/about/icons/about2.svg);
+        }
+
+        &--time {
+            width: 78px;
+            height: 64px;
+            background-image: url(../images/content/about/icons/about3.svg);
+        }
+
+        &--store {
+            width: 60px;
+            height: 64px;
+            background-image: url(../images/content/about/icons/about4.svg);
+        }
+
+    }
+
+    &__num {
+        font-size: 36px;
+        margin-bottom: 5px;
+        @include clamp(2);
+
+        @include r($mob) {
+            font-size: 22px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 1.8;
+        @include clamp(2);
+    }
+}

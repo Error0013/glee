@@ -1,5 +1,20 @@
 $(function () {
 
+  var acc = document.getElementsByClassName("filter-title");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
   $('.shop-content__btn').on('click', function () {
     $('.shop-content__btn').removeClass('shop-content__btn--active');
     $(this).addClass('shop-content__btn--active');
@@ -11,6 +26,14 @@ $(function () {
 
   $('.button-grid').on('click', function () {
     $('.shop-content__items').removeClass('shop-content__items--list')
+  })
+
+  $('.button-list').on('click', function () {
+    $('.shop__filters').addClass('shop__filters--list')
+  })
+
+  $('.button-grid').on('click', function () {
+    $('.shop__filters').removeClass('shop__filters--list')
   })
 
   $(".star").rateYo({
@@ -113,4 +136,6 @@ $(function () {
 
   var mixer1 = mixitup(containerEl1, config);
   var mixer2 = mixitup(containerEl2, config);
+
+  
 });

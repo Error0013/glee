@@ -10,7 +10,7 @@
         display: flex;
         align-items: baseline;
         padding-bottom: 65px;
-        border-bottom: 1px solid #dae4e9;
+        border-bottom: 1px solid $white400;
 
         @include r($md) {
             flex-wrap: wrap;
@@ -126,7 +126,7 @@
 
             &:not(:last-child) {
                 padding-right: 15px;
-                border-right: 1px solid #7b7b7b;
+                border-right: 1px solid $gray400;
                 margin-right: 15px;
             }
         }
