@@ -33,23 +33,24 @@
         @include r($md) {
             max-width: none;
             width: 49%;
+            margin-bottom: 30px;
         }
 
         @include r($mob) {
             width: 100%;
         }
 
-    }
-
-    &__item:not(:last-child) {
-        margin-right: 30px;
-
-        @include r($md) {
-            margin-right: 0;
+        &:last-child {
+            @include r($mob) {
+                margin-bottom: 0;
+            }
         }
 
-        @include r($mob) {
-            margin-bottom: 20px;
+        &:not(:last-child) {
+            margin-right: 30px;
+            @include r($md) {
+                margin-right: 0;
+            }
         }
     }
 
@@ -58,7 +59,7 @@
         margin-bottom: 15px;
         background-size: cover;
 
-        @include r($mob) {
+        @include r($md) {
             margin-bottom: 0;
         }
 
@@ -93,9 +94,12 @@
         margin-bottom: 5px;
         @include clamp(2);
 
+        @include r($md) {
+            margin-bottom: 0;
+        }
+
         @include r($mob) {
             font-size: 22px;
-            margin-bottom: 0;
         }
     }
 

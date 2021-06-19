@@ -1,0 +1,103 @@
+<div class="blog__aside">
+    <form class="search">
+        <label class="visually-hidden" for="blog-search">enter for search</label>
+        <input class="search__input" type="search" id="blog-search" name="blog-search" required>
+        <button class="search__btn" type="submit">
+            <svg width="17" height="17">
+                <use xlink:href="images/sprite.svg#search-form"></use>
+            </svg>
+        </button>
+    </form>
+    @@include('./_filter-category.html')
+    <div class="recent-posts">
+        <h3 class="filter-title">
+            Recent posts
+        </h3>
+        <ul class="recent-posts__items">
+            <li class="recent-posts__box">
+                <article class="recent-card">
+                    <a class="recent-card__link" href="#">
+                        <img class="recent-card__img" src="images/content/blog/blog-sm1.jpg" alt="interior photo">
+                        <div class="recent-card__box">
+                            <h4 class="recent-card__title">
+                                Corem ipsum dolor tetur adipisicing elit
+                            </h4>
+                            <div class="star" data-rateyo-rating="4"></div>
+                            <span class="recent-card__price">23<span>$</span></span>
+                            <div class="recent-card__date">
+                                <svg width="12" height="12">
+                                    <use xlink:href="images/sprite.svg#calendar"></use>
+                                </svg>
+                                <time class="articles-card__time" datetime="2020-01-28">28 january,
+                                    2020</time>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </li>
+            <li class="recent-posts__box">
+                <article class="recent-card">
+                    <a class="recent-card__link" href="#">
+                        <img class="recent-card__img" src="images/content/blog/blog-sm2.jpg" alt="interior photo">
+                        <div class="recent-card__box">
+                            <h4 class="recent-card__title">
+                                Fdipisicing elit, sed do eiusmod tempor
+                            </h4>
+                            <div class="star" data-rateyo-rating="4"></div>
+                            <span class="recent-card__price">23<span>$</span></span>
+                            <div class="recent-card__date">
+                                <svg width="12" height="12">
+                                    <use xlink:href="images/sprite.svg#calendar"></use>
+                                </svg>
+                                <time class="articles-card__time" datetime="2020-01-28">28 january,
+                                    2020</time>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </li>
+            <li class="recent-posts__box">
+                <article class="recent-card">
+                    <a class="recent-card__link" href="#">
+                        <img class="recent-card__img" src="images/content/blog/blog-sm3.jpg" alt="interior photo">
+                        <div class="recent-card__box">
+                            <h4 class="recent-card__title">
+                                Eonsectetur adipisicing elit, sed do eiusmod
+                            </h4>
+                            <div class="star" data-rateyo-rating="4"></div>
+                            <span class="recent-card__price">23<span>$</span></span>
+                            <div class="recent-card__date">
+                                <svg width="12" height="12">
+                                    <use xlink:href="images/sprite.svg#calendar"></use>
+                                </svg>
+                                <time class="articles-card__time" datetime="2020-01-28">28 january,
+                                    2020</time>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </li>
+            <li class="recent-posts__box">
+                <article class="recent-card">
+                    <a class="recent-card__link" href="#">
+                        <img class="recent-card__img" src="images/content/blog/blog-sm4.jpg" alt="interior photo">
+                        <div class="recent-card__box">
+                            <h4 class="recent-card__title">
+                                gnim ad minim veniam, quis nostrud
+                            </h4>
+                            <div class="star" data-rateyo-rating="4"></div>
+                            <span class="recent-card__price">23<span>$</span></span>
+                            <div class="recent-card__date">
+                                <svg width="12" height="12">
+                                    <use xlink:href="images/sprite.svg#calendar"></use>
+                                </svg>
+                                <time class="articles-card__time" datetime="2020-01-28">28 january,
+                                    2020</time>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </div>
+</div>

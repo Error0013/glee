@@ -69,6 +69,19 @@
 
     @include r($mob) {
         margin-bottom: 10px;
+        display: block;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 16px;
+            width: 2px;
+            right: 7px;
+            bottom: -4px;
+            background-color: $blue500;
+            transform: translateY(-50%);
+            transition: background-color 1s;
+        }
     }
 
     &::after {
@@ -80,6 +93,17 @@
         right: 0;
         top: 50%;
         transform: translateY(-50%);
+
+        @include r($mob) {
+            width: 16px;  
+            height: 2px;  
+        }
+    }
+}
+
+.filter-title.active {
+    &::before {
+        background-color: transparent;
     }
 }
 

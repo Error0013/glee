@@ -1,0 +1,114 @@
+.comment-form {
+    padding-bottom: 95px;
+
+    @include r($sm) {
+        padding-bottom: 50px;
+    }
+
+    @include r($mob) {
+        padding-bottom: 30px;
+    }
+
+    &__title {
+        font-size: 24px;
+        color: $blue700;
+        margin-bottom: 40px;
+
+        @include r($mob) {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        @include r($mob) {
+            flex-direction: column;
+        }
+    }
+
+    &__input {
+        position: relative;
+        max-width: 400px;
+        width: 100%;
+        padding: 15px 45px 15px 20px;
+        border: 1px solid $r-black102;
+        background-repeat: no-repeat;
+        background-position: center right 20px;
+        outline: transparent;        
+
+        &:focus {
+            border-color: $black700;
+        }
+
+        @include r($mob) {
+            max-width: 100%;
+        }
+
+        &::placeholder {
+            line-height: 2.25;
+            color: $gray900;
+        }
+
+        &:not(:last-child) {
+            margin-right: 10px;
+
+            @include r($mob) {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        &--name {
+            background-image: url(../images/content/blog-one/user-icon.svg);
+        }
+
+        &--email {
+            background-image: url(../images/content/blog-one/email.svg);
+        }
+    }
+
+    &__textarea {
+        max-width: 830px;
+        height: 120px;
+        width: 100%;
+        padding: 15px 40px 15px 20px;
+        margin-bottom: 40px;
+        border: 1px solid $r-black102;
+        resize: none;
+        background-image: url(../images/content/blog-one/text-area.svg);
+        background-repeat: no-repeat;
+        background-position: top 20px right 20px;
+        outline: transparent;
+
+        &:focus {
+            border-color: $black700;
+        }
+
+        @include r($mob) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__btn {
+        border: 1px solid transparent;
+        text-transform: uppercase;
+        padding: 10px 35px;
+        line-height: 1.5;
+        background-color: $blue500;
+        color: $white;
+        transition: color 0.5s;
+        outline: transparent;
+
+        &:hover {
+            color: $black700;
+        }
+
+        &:focus {
+            border-color: $black700;
+        }
+    }
+}

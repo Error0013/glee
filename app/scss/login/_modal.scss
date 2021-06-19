@@ -1,0 +1,137 @@
+.modal {
+    padding: 115px 0;
+
+    @include r($lg) {
+        padding: 80px 0;
+    }
+
+    @include r($mob) {
+        padding: 50px 0;
+    }
+
+    &__form {
+        max-width: 470px;
+        margin: 0 auto;
+    }
+
+    &__label {
+        display: block;
+        font-size: 14px;
+        color: $blue700;
+        margin-bottom: 15px;
+
+        @include r($mob) {
+            margin-bottom: 5px;
+        }
+
+        &--checkbox {
+            margin: 0;
+            padding-left: 15px;
+        }
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        border: 2px solid $gray500;
+        outline: transparent;
+        padding: 0 15px;
+        height: 60px;
+        margin-bottom: 25px;
+
+        @include r($mob) {
+            margin-bottom: 15px;
+        }
+
+        &--password {
+            margin-bottom: 35px;
+
+            @include r($mob) {
+                margin-bottom: 15px;
+            }
+        }
+
+        &--checkbox {
+            margin: 0;
+            height: unset;
+            width: auto;
+
+            &:checked+.modal__checkbox {
+                background-image: url(../images/content/check-on1.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    &__checkbox {
+        width: 14px;
+        height: 14px;
+        background-color: $white500;
+        border-radius: 2px;
+    }
+
+    &__btn {
+        border: 2px solid transparent;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 3;
+        display: block;
+        width: 100%;
+        transition: color 0.5s, background-color 0.5s;
+
+        &--login {
+            background-color: $blue500;
+            color: $white;
+            margin-bottom: 32px;
+
+            &:hover {
+                color: $black700;
+            }
+        }
+
+        &--create {
+            border-color: $blue500;
+            background-color: transparent;
+
+            &:hover {
+                background-color: $blue500;
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        border-bottom: 2px solid $gray500;
+    }
+
+    &__box {
+        display: flex;
+        color: $blue700;
+        align-items: center;
+    }
+
+    &__link {
+        font-size: 14px;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom-color 0.5s;
+        color: $blue700;
+
+        &:hover {
+            border-bottom-color: $black700;
+        }
+    }
+
+    &__text {
+        padding: 30px 0 25px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+}
+
+.modal+.partners {
+    padding-top: 0;
+}

@@ -1,0 +1,33 @@
+<section class="modal">
+    <div class="container container--sm">
+        <form class="modal__form">
+            <label class="modal__label" for="username">
+                Username or email address *
+            </label>
+            <input class="modal__input" type="text" id="username" name="username[login]" required>
+            <label class="modal__label" for="userpass">
+                Password *
+            </label>
+            <input class="modal__input modal__input--password" type="password" id="userpass" name="password[login]"
+                required>
+            <button class="modal__btn modal__btn--login" type="submit">Login</button>
+            <div class="modal__inner">
+                <div class="modal__box">
+                    <input class="modal__input modal__input--checkbox visually-hidden" type="checkbox" id="userremember"
+                        checked>
+                    <span class="modal__checkbox"></span>
+                    <label class="modal__label modal__label--checkbox" for="userremember">
+                        Remember me
+                    </label>
+                </div>
+                <a class="modal__link" href="#">Lost your password?</a>
+            </div>
+            <p class="modal__text">
+                Not registered? No problem
+            </p>
+            <button class="modal__btn modal__btn--create" type="submit">
+                Create an account
+            </button>
+        </form>
+    </div>
+</section>

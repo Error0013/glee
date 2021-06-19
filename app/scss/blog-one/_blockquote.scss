@@ -1,0 +1,36 @@
+.blockquote {
+    padding: 15px 35px;
+    background-color: $blue300;
+    border-left: 7px solid $blue500;
+    margin-bottom: 45px;
+
+    @include r($mob) {
+        margin-bottom: 20px;
+    }
+
+    &__inner {
+        max-width: 730px;
+        line-height: 1.9;
+    }
+
+    &__text {
+        margin-bottom: 10px;
+    }
+
+    &__author {
+        padding-left: 40px;
+        position: relative;
+        font-style: normal;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 4px;
+            left: 0;
+            top: 3px;
+            transform: translateY(100%);
+            background-color: $blue500;
+        }
+    }
+}

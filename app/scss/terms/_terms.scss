@@ -1,0 +1,58 @@
+.terms {
+    padding: 110px 0;
+
+    @include r($lg) {
+        padding: 80px 0;
+    }
+
+    @include r($mob) {
+        padding: 50px 0;
+    }
+
+    &__title {
+        font-weight: 500;
+        line-height: 1.7;
+        margin-bottom: 15px;
+        @include clamp(3);
+
+        @include r($mob) {
+            font-size: 22px;
+        }
+    }
+
+    &__list {
+        list-style-type: decimal-leading-zero;
+        margin-bottom: 60px;
+        margin-left: 30px;
+
+        @include r($lg) {
+            margin-bottom: 50px;
+        }
+
+        @include r($mob) {
+            margin-bottom: 23px;
+        }
+    }
+
+    &__item {
+        line-height: 1.9;
+        padding-left: 5px;
+        margin-bottom: 20px;
+
+        @include r($mob) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__text {
+        line-height: 1.9;
+
+        &:not(:last-child) {
+            margin-bottom: 45px;
+
+            @include r($mob) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

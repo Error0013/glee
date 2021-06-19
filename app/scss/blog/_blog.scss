@@ -1,0 +1,184 @@
+.blog {
+    padding: 120px 0 20px;
+
+    @include r($lg) {
+        padding-top: 80px;
+    }
+
+    @include r($sm) {
+        padding-top: 50px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+
+        @include r($sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__content {
+        margin-right: 15px;
+
+        @include r($sm) {
+            margin-right: 0;
+        }
+    }
+
+    &__list {
+        margin-bottom: 95px;
+
+        @include r($mob) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 50px;
+
+        @include r($mob) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__aside {
+        max-width: 270px;
+        width: 100%;
+
+        @include r($sm) {
+            order: -1;
+            max-width: 100%;
+        }
+
+        .filter-category {
+            margin-bottom: 40px;
+
+            @include r($sm) {
+                margin-bottom: 30px;
+            }
+
+            @include r($mob) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .articles-card {
+        max-width: 830px;
+        width: 100%;
+
+        @include r($sm) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__inner {
+            overflow: hidden;
+        }
+
+        &__img {
+            width: 830px;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-top: -71px;
+            background-color: transparent;
+
+            @include r($sm) {
+                width: 100%;
+            }
+        }
+
+        &__link {
+            display: none;
+        }
+
+        &__info {
+            margin: 0 0 25px 0;
+            padding-top: 0;
+            font-family: $rubik;
+            font-weight: 400;
+            font-size: 36px;
+
+            @include r($mob) {
+                font-size: 26px;
+                margin-bottom: 15px;
+            }
+        }
+
+        &__text {
+            line-height: 1.9;
+            margin-bottom: 30px;
+
+            @include r($mob) {
+                margin-bottom: 10px;
+            }
+        }
+
+        &__bottom {
+            border-top: none;
+            order: -1;
+            margin: 0 0 35px 0;
+            padding: 20px;
+            background-color: $blue500;
+            max-width: 275px;
+            color: $white;
+
+            @include r($mob) {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            svg {
+                fill: $white;
+            }
+        }
+
+        &__copy {
+
+            &:hover {
+                border-bottom-color: $white;
+            }
+        }
+
+        &__btn {
+            border: 1px solid $blue500;
+            max-width: 180px;
+            width: 100%;
+            padding: 20px;
+            color: $blue500;
+            transition: color 0.5s;
+
+            &:hover {
+                color: $black700;
+
+                svg {
+                    fill: $black700;
+                }
+            }
+
+            svg {
+                fill: $blue500;
+                transition: fill 0.5s;
+            }
+        }
+
+    }
+
+    .pagination {
+        justify-content: flex-start;
+    }
+}
+
+.blog+.partners {
+    padding-top: 0;
+
+    .partners__items {
+        padding: 80px 0 80px 50px;
+    }
+}

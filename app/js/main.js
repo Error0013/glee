@@ -1,19 +1,53 @@
 $(function () {
 
-  var acc = document.getElementsByClassName("filter-title");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
+  $('.product-tabs__link').on('click', function (e) {
+    e.preventDefault();
+    $('.product-tabs__link').removeClass('product-tabs__link--active');
+    $(this).addClass('product-tabs__link--active');
+    $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+    $($(this).attr('href')).addClass('product-tabs__content-item--active');
   });
-}
+
+  $('.product__num').styler();
+
+  $('.product-slide__thumb').slick({
+    asNavFor: '.product-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+    arrows: false,
+  });
+  $('.product-slide__big').slick({
+    asNavFor: '.product-slide__thumb',
+    draggable: false,
+    arrows: false,
+    fade: true,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        draggable: true,
+      }
+    }]
+
+  });
+
+  var acc = document.getElementsByClassName("filter-title");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+
 
   $('.shop-content__btn').on('click', function () {
     $('.shop-content__btn').removeClass('shop-content__btn--active');
@@ -70,6 +104,30 @@ for (i = 0; i < acc.length; i++) {
   $('.trendy-slider__items').slick({
     dots: true,
     arrows: false,
+  });
+
+  $('.related-products__list').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [{
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
   });
 
   $('.partners__items').slick({
@@ -137,5 +195,9 @@ for (i = 0; i < acc.length; i++) {
   var mixer1 = mixitup(containerEl1, config);
   var mixer2 = mixitup(containerEl2, config);
 
-  
+
+
+
+
+
 });

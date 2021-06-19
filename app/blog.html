@@ -1,0 +1,29 @@
+@@include('./parts/components/_head.html', {
+"title": "Glee"
+})
+
+
+@@include('./parts/components/_header.html')
+
+@@include('./parts/components/_main-top.html', {
+"mt_title": "Blog"
+})
+
+<main class="main">
+
+    <section class="blog">
+        <div class="container container--sm">
+            <div class="blog__inner">
+
+                @@include('./parts/blog/_blog-content.html')
+                @@include('./parts/components/_blog-aside.html')
+
+            </div>
+        </div>
+    </section>
+
+</main>
+@@include('./parts/components/_footer.html')
+
+
+@@include('./parts/components/_scripts.html')
